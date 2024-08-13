@@ -134,7 +134,7 @@ Utilizando el número combinatorio, calcular de cuántas formas se puede:
 
 > $Total = \binom{39}{18} = 62.359.143.990$
 
-## 6) Bolas indistinguibles y distinguibles
+## 6) Bolas indistinguibles
 Se tienen $n$ urnas diferentes. ¿De cuántas maneras diferentes se pueden colocar en ellas $m (n < m)$ bolas idénticas:
 
 (a) sin restricción alguna en cuanto al número de bolas en cada urna;
