@@ -139,7 +139,7 @@ Se tienen $n$ urnas diferentes. ¿De cuántas maneras diferentes se pueden coloc
 
 (a) sin restricción alguna en cuanto al número de bolas en cada urna;
 
-> El número de maneras diferentes de colocar mm bolas idénticas en $n$ urnas diferentes, sin ninguna restricción en cuanto al número de bolas en cada urna, es: $\binom{m+n-1}{n-1} = \frac{(m+n-1)!}{(n-1)!m!}$
+> El número de maneras diferentes de colocar $m$ bolas idénticas en $n$ urnas diferentes, sin ninguna restricción en cuanto al número de bolas en cada urna, es: $\binom{m+n-1}{n-1} = \frac{(m+n-1)!}{(n-1)!m!}$
 
 (b) si no puede haber ninguna urna vacı́a;
 
