@@ -19,7 +19,7 @@ Se arroja dos veces un dado equilibrado, registrándose los resultados obtenidos
 (c) Calcular las probabilidades de los eventos definidos en 1b).
 
 >- $P(A) = \frac{|A|}{|S|} = \frac{36-6}{36} = 0.8333$. Para sacar $|A|$ lo pienso por complemento, la suma de ambos dados sea menor a $5$, en este caso son $(1,1), (1,2), (1,3)$ esa cantidad multiplicado por dos ya que pueden alternar el orden de los números de cada dado.  
->- $P(B) = \frac{|B|}{|S|} = \frac{36-21}{36} = 0.4166$. Similar al razonamiento de arriba, en este caso es contar la cantidad de formas tal que el segundo dado sea mayor igual que el primero. Si saco $1$ en el primer dado, tengo $6$. Si saco $2$ en el primer dado tengo $5$ y así. Queda $\sum_{i=1}⁶i = 21$ 
+>- $P(B) = \frac{|B|}{|S|} = \frac{36-21}{36} = 0.4166$. Similar al razonamiento de arriba, en este caso es contar la cantidad de formas tal que el segundo dado sea mayor igual que el primero. Si saco $1$ en el primer dado, tengo $6$. Si saco $2$ en el primer dado tengo $5$ y así. Queda $\sum_{i=1}^{6} i = 21$ 
 >- $P(C) = \frac{|C|}{|S|} = \frac{6}{36} = 0.1666$. Dejando fijo el primer dado, solo hay 6 posibilidades para el segundo dado.
 
 (d) Simular en R el experimento de tirar dos veces un dado equilibrado.
