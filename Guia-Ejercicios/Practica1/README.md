@@ -24,11 +24,11 @@ Se arroja dos veces un dado equilibrado, registrándose los resultados obtenidos
 
 (d) Simular en R el experimento de tirar dos veces un dado equilibrado.
 
->En el archivo [Practica1.pynb](https://github.com/malei-dc/PyE/tree/main/Guia-Ejercicios/Practica1.pynb)
+>En el archivo [Practica1.pynb](https://github.com/malei-dc/PyE/blob/main/Guia-Ejercicios/Practica1/Practica1.ipynb)
 
 (e) Simular 1000 veces en R el experimento de tirar dos veces un dado equilibrado y estimar las probabilidades de los sucesos definidos en 1b).
 
->En el archivo [Practica1.pynb](https://github.com/malei-dc/PyE/tree/main/Guia-Ejercicios/Practica1.pynb)
+>En el archivo [Practica1.ipynb](https://github.com/malei-dc/PyE/blob/main/Guia-Ejercicios/Practica1/Practica1.ipynb)
 
 (f) Describir los siguientes conjuntos:
 1. $A \cap B$
@@ -65,7 +65,7 @@ Se arroja dos veces un dado equilibrado, registrándose los resultados obtenidos
 
 (h) Estimar las probabilidades de los sucesos definidos en 1f) mediante simulaciones. Comparar con los resultados obtenidos en 1g).
 
->En el archivo [Practica1.pynb](https://github.com/malei-dc/PyE/tree/main/Guia-Ejercicios/Practica1.pynb)
+>En el archivo [Practica1.ipynb](https://github.com/malei-dc/PyE/blob/main/Guia-Ejercicios/Practica1/Practica1.ipynb)
 
 ## 2) Eventos
 (a) Dados dos eventos $A$ y $B$ tales que se conocen $P(A \cup B)$ y $P(A \cap B)$, hallar una fórmula para la probabilidad de que ocurra exactamente uno de estos eventos.
