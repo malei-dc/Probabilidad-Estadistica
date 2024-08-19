@@ -48,7 +48,7 @@ Tenemos 3 cajas numeradas y 4 bolitas blancas que se distribuyen todas al azar. 
 ## Ejercicio 3
 Una empresa constructora trabaja en dos proyectos diferentes. Sea $A$ el evento: “el primero de los proyectos se termina en la fecha del contrato” y definamos análogamente $B$ para el segundo proyecto. Si $P (A \cup B) = 0,9$ y $P (A \cap B) = 0,5$, ¿cuál es la probabilidad de que exactamente un proyecto se termine para la fecha del contrato?
 
-> $P(exactamente\_ uno\_ de\_ A\_ o\_ B)= P(A \cup B)  - P(B \cap A) = 0.9 - 0.5 = 0.4$
+> $P(exactamenteUno)= P(A \cup B)  - P(B \cap A) = 0.9 - 0.5 = 0.4$
 >
 > El origen de la fórmula explicado en el [Ejercicio 2a de la práctica 1](https://github.com/malei-dc/PyE/tree/main/Guia-Ejercicios/Practica1).
 
@@ -69,6 +69,7 @@ En una materia optativa, el 35 % de los asistentes estudia ingenierı́a, el 67 
 > Queremos calcular $P(C^c \cap B)$. Usamos la relación que tenemos entre $B$.
 >
 > $$P(B) = P(B \cap C) \cup P(B \cap C^c) =  P(B \cap C) + P(B \cap C^c)$$
+>
 > $$0.67 = 0.29 +  P(B \cap C^c) \Rightarrow P(B \cap C^c) = 0.38$$
 
 (b) solo tome café,
@@ -76,11 +77,13 @@ En una materia optativa, el 35 % de los asistentes estudia ingenierı́a, el 67 
 > Quiero calcular $P(C \cap A^c \cap B^c) = P(C) - P(C \cap A) - P(C \cap B) + P(A \cap B \cap C)$, como en (e) calculé que $P(A \cap B \cap C) = 0.15$ ya tengo todo lo que necesito para calcular el resultado:
 >
 > $$P(C \cap A^c \cap B^c) = P(C) - P(C \cap A) - P(C \cap B) + P(A \cap B \cap C)$$
+>
 > $$P(C \cap A^c \cap B^c) = 0.56 - 0.22 - 0.29 + 0.15 = 0.2$$
 
 (c) solo estudie ingenierı́a,
 
 > $$P(A \cap B^c \cap C^c) = P(A) - P(A \cap C) - P(A \cap B) + P(A \cap B \cap C)$$
+>
 > $$P(A \cap B^c \cap C^c) = 0.35 - 0.22 - 0.27 + 0.15 = 0.01$$
 
 (d) estudie ingenierı́a o prefiera Netfix,
@@ -96,7 +99,9 @@ En una materia optativa, el 35 % de los asistentes estudia ingenierı́a, el 67 
 > Como tenemos que $P(A^c \cap B^c \cap C^c) = P((A \cup B \cup C)^c) = 0.05 \Rightarrow P(A \cup B \cup C) = 1 - 0.05 = 0.95$ y con esto ya podemos despejar la fórmula:
 >
 > $$ P(A \cup B \cup C) = P(A)+P(B)+P(C)-P(A \cap B)-P(A \cap C)-P(C \cap B)+P(A \cap B \cap C)$$
+>
 > $$ 0.95 = 0.35+0.67+0.56-0.27-0.22-0.29+P(A \cap B \cap C)$$
+>
 > $$ P(A \cap B \cap C) = 0.15$$
 
 

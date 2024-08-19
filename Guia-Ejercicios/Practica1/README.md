@@ -74,8 +74,9 @@ Se arroja dos veces un dado equilibrado, registrándose los resultados obtenidos
 >
 > Por otro lado podemos expresar $P(A \cap B^c) = P(A) - P(A \cap B)$ y $P(B \cap A^c) = P(B) - P(B \cap A)$. Entonces: 
 >
-> $$P(exactamente\_ uno \_ de \_ A \_ o \_ B)= P(A) - P(A \cap B) +  P(B) - P(B \cap A)$$ 
-> $$P(exactamente\_ uno \_ de \_ A \_ o \_ B)= P(A) +  P(B) - 2P(B \cap A)$$
+> $$P(exactamenteUno)= P(A) - P(A \cap B) +  P(B) - P(B \cap A)$$ 
+>
+> $$P(exactamenteUno)= P(A) +  P(B) - 2P(B \cap A)$$
 >
 > Sabemos también que la relación de $P(A \cup B) = P(A)+P(B)-P(A\cap B)$, despejando $P(A)+P(B)$ nos queda:
 >
@@ -83,12 +84,13 @@ Se arroja dos veces un dado equilibrado, registrándose los resultados obtenidos
 >
 > Reemplazando $P(A)+P(B)$ en la fórmula de la probabilidad de exactamente uno de los eventos nos queda:
 >
-> $$ P(exactamente \_ uno \_ de \_ A \_ o \_ B)= P(A \cup B) +  P(A\cap B) - 2P(B \cap A) $$
-> $$ P(exactamente \_ uno \_ de \_ A \_ o \_ B)= P(A \cup B)  - P(B \cap A)$$
+> $$ P(exactamenteUno)= P(A \cup B) +  P(A\cap B) - 2P(B \cap A) $$
+>
+> $$ P(exactamenteUno)= P(A \cup B)  - P(B \cap A)$$
 
 (b) Una compañı́a constructora trabaja en dos proyectos diferentes. Sea $A$ el evento: “el primero de los proyectos se termina en la fecha del contrato” y definamos análogamente $B$ para el segundo proyecto. Si $P(A \cup B) = 0.9$ y $P (A \cap B) = 0.5$, ¿cuál es la probabilidad de que exactamente un proyecto se termine para la fecha de contrato?
 
-> Por **(a)** sabemos que: $P(exactamente \_ uno \_ de \_ A \_ o \_B)= P(A \cup B)  - P(B \cap A) = 0.9 - 0.5 = 0.4$
+> Por **(a)** sabemos que: $P(exactamenteUno)= P(A \cup B)  - P(B \cap A) = 0.9 - 0.5 = 0.4$
 
 ## 3) Computadora
 Supongamos que cuando una computadora se “cuelga” (no responde), el 75% de las veces se debe a problemas de memoria y el 15 % de las veces a problemas de software y que el 15 % de las veces se debe a problemas que no son ni de memoria ni de software. Si una computadora se cuelga,
