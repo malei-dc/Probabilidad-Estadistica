@@ -70,6 +70,30 @@ Se arroja dos veces un dado equilibrado, registrándose los resultados obtenidos
 ## 2) Eventos
 (a) Dados dos eventos $A$ y $B$ tales que se conocen $P(A \cup B)$ y $P(A \cap B)$, hallar una fórmula para la probabilidad de que ocurra exactamente uno de estos eventos.
 
-
+> Vamos a descomponer el problema. La probabilidad de que ocurra solamente $A$ pero no $B$ es $P(A \cap B^c)$, analogamente se puede hacer para el evento $B$. Entonces la probabilidad de que ocurra exactamente uno de estos eventos es la suma de $P(A \cap B^c)+P(B \cap A^c)$ 
+>
+> Por otro lado podemos expresar $P(A \cap B^c) = P(A) - P(A \cap B)$ y $P(B \cap A^c) = P(B) - P(B \cap A)$. Entonces: 
+>
+> $$P(exactamente\_uno\_de\_A\_o\_B)= P(A) - P(A \cap B) +  P(B) - P(B \cap A)$$ 
+> $$ P(exactamente\_uno\_de\_A\_o\_B)= P(A) +  P(B) - 2P(B \cap A)$$
+>
+> Sabemos también que la relación de $P(A \cup B) = P(A)+P(B)-P(A\cap B)$, despejando $P(A)+P(B)$ nos queda:
+>
+> $$P(A)+P(B) = P(A \cup B) +  P(A\cap B)$$
+>
+> Reemplazando $P(A)+P(B)$ en la fórmula de la probabilidad de exactamente uno de los eventos nos queda:
+>
+> $$ P(exactamente\_uno\_de\_A\_o\_B)= P(A \cup B) +  P(A\cap B) - 2P(B \cap A) $$
+> $$ P(exactamente\_uno\_de\_A\_o\_B)= P(A \cup B)  - P(B \cap A)$$
 
 (b) Una compañı́a constructora trabaja en dos proyectos diferentes. Sea $A$ el evento: “el primero de los proyectos se termina en la fecha del contrato” y definamos análogamente $B$ para el segundo proyecto. Si $P(A \cup B) = 0.9$ y $P (A \cap B) = 0.5$, ¿cuál es la probabilidad de que exactamente un proyecto se termine para la fecha de contrato?
+
+> Por **(a)** sabemos que: $P(exactamente\_uno\_de\_A\_o\_B)= P(A \cup B)  - P(B \cap A) = 0.9 - 0.5 = 0.4$
+
+## 3) Computadora
+Supongamos que cuando una computadora se “cuelga” (no responde), el 75% de las veces se debe a problemas de memoria y el 15 % de las veces a problemas de software y que el 15 % de las veces se debe a problemas que no son ni de memoria ni de software. Si una computadora se cuelga,
+
+(a) ¿cuál es la probabilidad de que estos dos problemas ocurran simultáneamente?
+
+(b) ¿cuál es la probabilidad de que ocurra un problema de software y no de memoria?
+
