@@ -48,7 +48,7 @@ Tenemos 3 cajas numeradas y 4 bolitas blancas que se distribuyen todas al azar. 
 ## Ejercicio 3
 Una empresa constructora trabaja en dos proyectos diferentes. Sea $A$ el evento: “el primero de los proyectos se termina en la fecha del contrato” y definamos análogamente $B$ para el segundo proyecto. Si $P (A \cup B) = 0,9$ y $P (A \cap B) = 0,5$, ¿cuál es la probabilidad de que exactamente un proyecto se termine para la fecha del contrato?
 
-> $P(exactamente\_uno\_de\_A\_o\_B)= P(A \cup B)  - P(B \cap A) = 0.9 - 0.5 = 0.4$
+> $P(exactamente\_ uno\_ de\_ A\_ o\_ B)= P(A \cup B)  - P(B \cap A) = 0.9 - 0.5 = 0.4$
 >
 > El origen de la fórmula explicado en el [Ejercicio 2a de la práctica 1](https://github.com/malei-dc/PyE/tree/main/Guia-Ejercicios/Practica1).
 
