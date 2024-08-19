@@ -97,5 +97,25 @@ Supongamos que cuando una computadora se “cuelga” (no responde), el 75% de l
 
 (a) ¿cuál es la probabilidad de que estos dos problemas ocurran simultáneamente?
 
+>- $P(A) = 0.75 \rightarrow$ "Probabilidad de problemas de memoria"
+>- $P(B) = 0.15 \rightarrow$ "Probabilidad de problemas de software"
+>- $P(A^c \cap B^c) = 0.15 \rightarrow$ "Probabilidad de problemas no son ni de memoria ni de software"
+>
+> Quiero calcular $P(A\cap B)$, vamos a usar la formula de $P(A \cup B)=P(A)+P(B)-P(A\cap B)$. Teniendo $P(A^c \cap B^c) = P((A \cup B)^c) = 1 - P(A \cup B) = 0.15 \Rightarrow P(A \cup B) = 0.85$. Entonces reemplazando en la fórmula nos queda:
+>
+> $$ P(A \cup B)=P(A)+P(B)-P(A\cap B)$$
+>
+> $$ 0.85 = 0.75 + 0.15 - P(A\cap B)$$
+>
+> $$ P(A\cap B) = 0.05$$
+
 (b) ¿cuál es la probabilidad de que ocurra un problema de software y no de memoria?
 
+> Queremos saber $P(B \cap A^c) = P(B) - P(B \cap A) = 0.15 - 0.05 = 0.10$ 
+
+## 4) Bolillero
+De un bolillero que contiene $5$ bolillas numeradas $1, 2, 3, 4, 5$ se extrae una al azar, sea la número $k$. Se eliminan las bolillas cuyo número es mayor que $k$ de la urna y se hace una segunda extracción al azar entre las bolillas $1$ a $k$, sea la número $j$. Se eliminan las bolillas cuyo número es mayor que $j$ de la urna y se hace una tercera extracción al azar entre las bolillas $1$ a $j$.
+
+(a) Describir un espacio muestral adecuado para este experimento y determinar el número de elementos que posee.
+
+(b) ¿Es razonable suponer equiprobabilidad en este espacio? ¿Qué probabilidad le asignarı́a al (3,2,1)?
