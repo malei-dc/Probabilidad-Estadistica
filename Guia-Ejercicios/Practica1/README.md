@@ -136,14 +136,14 @@ De un bolillero que contiene $5$ bolillas numeradas $1, 2, 3, 4, 5$ se extrae un
 
 > No realmente, ya que se define equiprobabilidad cuando los $n$ sucesos elementales tienen igual probabilidad, en este caso solo aplica al sacar tres veces $5$ ya que al tener que retirar las bolillas mayores al número que se extrajo, cambia la probabilidad en cada caso. Por ejemplo para la secuencia $(3,2,1)$ calculamos la probabilidad:
 >
-> $$P((3,2,1)) = P(x_1 = 3) * P(x_2 = 2) * P(x_3 = 1) = \frac{1}{5}*\frac{1}{3}*\frac{1}{2} = \frac{1}{30} $$
+> $$P((3,2,1)) = P(x_1 = 3) * P(x_2 = 2) * P(x_3 = 1) = \frac{1}{5} * \frac{1}{3} * \frac{1}{2} = \frac{1}{30} $$
 >
 > Incluso para secuencias diferentes no va a tener la misma probabilidad:
 > 
-> $$P((5,5,5)) = P(x_1 = 5) * P(x_2 = 5) * P(x_3 = 5) = \frac{1}{5}*\frac{1}{5}*\frac{1}{5} = \frac{1}{125} $$
+> $$P((5,5,5)) = P(x_1 = 5) * P(x_2 = 5) * P(x_3 = 5) = \frac{1}{5} * \frac{1}{5} * \frac{1}{5} = \frac{1}{125}$$
 
 ## 5) Proveedora de software
-Una firma proveedora de software ha ofrecido sus servicios a 3 empresas. Se definen los eventos $A_i = \{ \text{la empresa i realiza una compra a esta firma} \}$ , para $i = 1, 2, 3$. Se sabe que:
+Una firma proveedora de software ha ofrecido sus servicios a $3$ empresas. Se definen los eventos $A_i =$ {la empresa i realiza una compra a esta firma} , para $i = 1, 2, 3$. Se sabe que:
 
 - $P(A_1) = 0.22$
 - $P(A_2) = 0.25$
