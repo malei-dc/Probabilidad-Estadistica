@@ -118,4 +118,42 @@ De un bolillero que contiene $5$ bolillas numeradas $1, 2, 3, 4, 5$ se extrae un
 
 (a) Describir un espacio muestral adecuado para este experimento y determinar el número de elementos que posee.
 
-(b) ¿Es razonable suponer equiprobabilidad en este espacio? ¿Qué probabilidad le asignarı́a al (3,2,1)?
+> $S = \{(x_1, x_2, x_3) / 1 \leq x_3 \leq x_2 \leq x_1 \leq 5 \}$ 
+> - Si $x_1 = 5:$
+>   - $x_2$ puede ser 1, 2, 3, 4 o 5.
+>   - Si $x_2=5$, $x_3$ puede ser 1, 2, 3, 4 o 5.
+>   - Si $x_2=4$, $x_3$ puede ser 1, 2, 3, o 4.
+>   - Si $x_2=3$, $x_3$ puede ser 1, 2, o 3.
+>   - Si $x_2=2$, $x_3$ puede ser 1, o 2.
+>   - Si $x_2=1$, $x_3$ puede ser 1.
+>   - Secuencias: $(5,5,5), (5,5,4), (5,5,3), (5,5,2), (5,5,1), (5,4,4), (5,4,3), (5,4,2), (5,4,1), (5,3,3), (5,3,2), (5,3,1), (5,2,2), (5,2,1), (5,1,1)$. Con un total de 15 posibilidades.
+> - Hay que hacer lo mismo para $x_1 = 4, 3, 2, 1$, por suerte se puede tirar un par de lineas de código para que lo haga :)
+>
+> Todas las secuencias están en el archivo [Practica1.ipynb](https://github.com/malei-dc/PyE/blob/main/Guia-Ejercicios/Practica1/Practica1.ipynb) y el cálculo de todas las combinaciones posibles es $|S| = 35$.
+
+
+(b) ¿Es razonable suponer equiprobabilidad en este espacio? ¿Qué probabilidad le asignarı́a al $(3,2,1)$?
+
+> No realmente, ya que se define equiprobabilidad cuando los $n$ sucesos elementales tienen igual probabilidad, en este caso solo aplica al sacar tres veces $5$ ya que al tener que retirar las bolillas mayores al número que se extrajo, cambia la probabilidad en cada caso. Por ejemplo para la secuencia $(3,2,1)$ calculamos la probabilidad:
+>
+> $$P((3,2,1)) = P(x_1 = 3) * P(x_2 = 2) * P(x_3 = 1) = \frac{1}{5}*\frac{1}{3}*\frac{1}{2} = \frac{1}{30} $$
+>
+> Incluso para secuencias diferentes no va a tener la misma probabilidad:
+> 
+> $$P((5,5,5)) = P(x_1 = 5) * P(x_2 = 5) * P(x_3 = 5) = \frac{1}{5}*\frac{1}{5}*\frac{1}{5} = \frac{1}{125} $$
+
+## 5) Proveedora de software
+Una firma proveedora de software ha ofrecido sus servicios a 3 empresas. Se definen los eventos $A_i = \{ \text{la empresa i realiza una compra a esta firma} \}$ , para $i = 1, 2, 3$. Se sabe que:
+
+- $P(A_1) = 0.22$
+- $P(A_2) = 0.25$
+- $P(A_3) = 0.28$
+- $P(A_1 \cap A_2) = 0.11$
+- $P(A_1 \cap A_3) = 0.05$
+- $P(A_2 \cap A_3) = 0.07$
+- $P(A_1 \cap A_2 \cap A_3) = 0.01$
+
+Expresar en palabras los siguientes eventos y calcular sus probabilidades:
+
+- $A_1 \cup A_2$
+
