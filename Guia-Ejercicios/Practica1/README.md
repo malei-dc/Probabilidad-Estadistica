@@ -170,13 +170,13 @@ Expresar en palabras los siguientes eventos y calcular sus probabilidades:
     >
     >$$P(A_1 \cup A_2 \cup A_3) = P(A_1) + P(A_2) + P(A_3) - P(A_1 \cap A_2) - P(A_1 \cap A_3) - P(A_2 \cap A_3) + P(A_1 \cap A_2 \cap A_3) = $$
     >
-    >$$ = 0.22 + 0.25 + 0.28 - 0.11 - 0.05 - 0.07 + 0.01 = 0.53$$
+    >$$= 0.22 + 0.25 + 0.28 - 0.11 - 0.05 - 0.07 + 0.01 = 0.53$$
     >
 
 - $A_1^c \cap A_2^c \cap A_3^c$
     > "Ninguno compra"
     >
-    > $$ P(A_1^c \cap A_2^c \cap A_3^c) = P((A_1 \cup A_2 \cup A_3)^c) = 1 - P(A_1 \cup A_2 \cup A_3) = 1 - 0.53 = 0.47$$
+    > $$P(A_1^c \cap A_2^c \cap A_3^c) = P((A_1 \cup A_2 \cup A_3)^c) = 1 - P(A_1 \cup A_2 \cup A_3) = 1 - 0.53 = 0.47$$
     >
 
 - $A_1^c \cap A_2^c \cap A_3$
@@ -188,9 +188,9 @@ Expresar en palabras los siguientes eventos y calcular sus probabilidades:
 - $(A_1^c \cap A_2^c ) \cup A_3$
     > "1 y 2 no compran o bien 3 compra"
     >
-    >$$ P((A_1^c \cap A_2^c ) \cup A_3) = P((A_1 \cup A_2)^c \cup A_3) = (1-P(A_1 \cup A_2)) +P(A_3) - P(A_1^c \cap A_2^c \cap A_3) = $$
+    >$$P((A_1^c \cap A_2^c ) \cup A_3) = P((A_1 \cup A_2)^c \cup A_3) = (1-P(A_1 \cup A_2)) +P(A_3) - P(A_1^c \cap A_2^c \cap A_3) = $$
     >
-    >$$ = 1-(P(A_1) + P(A_2) - P(A_1 \cap A_2)) + P(A_3) - P(A_1^c \cap A_2^c \cap A_3) =$$
+    >$$= 1-(P(A_1) + P(A_2) - P(A_1 \cap A_2)) + P(A_3) - P(A_1^c \cap A_2^c \cap A_3) =$$
     >
     >$$= 1- (0.22 + 0.25 - 0.11) +0.28 - 0.17 = 0.75$$
     >
