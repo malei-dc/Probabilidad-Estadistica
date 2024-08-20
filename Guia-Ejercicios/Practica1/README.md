@@ -158,7 +158,7 @@ Expresar en palabras los siguientes eventos y calcular sus probabilidades:
 - $A_1 \cup A_2$
     > "La empresa $1$ o $2$ realizan una compra". 
     >
-    >$$P(A_1 \cup A_2) = P(A_!) + P(A_2) - P(A_1 \cap A_2) = 0.22 + 0.25 - 0.11 = 0.36$$
+    >$$P(A_1 \cup A_2) = P(A_1) + P(A_2) - P(A_1 \cap A_2) = 0.22 + 0.25 - 0.11 = 0.36$$
 
 - $A_1^c \cap A_2^c$
     > "La empresa 1 no compra y la empresa 2 no compra". 
@@ -196,8 +196,27 @@ Expresar en palabras los siguientes eventos y calcular sus probabilidades:
     >
 
 ## 6) Grupete
-Un grupo de 60 alumnos será subdividido al azar en dos divisiones de 30 alumnos cada una. Cinco de esos alumnos son muy amigos.: Alicia, Beto, Carmen, Diego y Eva.
+Un grupo de 60 alumnos será subdividido al azar en dos divisiones de 30 alumnos cada una. Cinco de esos alumnos son muy amigos: Alicia, Beto, Carmen, Diego y Eva.
 
 (a) ¿Cuál es la probabilidad de que todos queden en la misma división?
 
+> La cantidad de formas de dividir 60 alumnos en dos grupos de 30 es $\binom{60}{30}$ ya que al agarrar 30 alumnos automaticamente ubico el restante en el otro curso. Entonces para calcular la probabilidad de que el grupo entero quede junto simplemente los excluyo de la selección, es decir de 55 alumnos elijo 25 y ese va a ser un curso donde esté el grupo entero. Como hay dos posibles cursos, multiplico por dos. La cuenta queda:
+>
+>$$2*\frac{\binom{55}{25}}{\binom{60}{30}} \approx 0.0522$$
+
 (b) ¿Cuál es la probabilidad de que sólo quede separado Diego?
+
+> Acá tenemos que seleccionar 26 alumnos de 55 (excluyendo a diego). Pero no multiplicamos por dos ya que innevitablemente diego puede solo ir al curso contrario. La cuenta queda:
+>
+>$$\frac{\binom{55}{26}}{\binom{60}{30}} \approx 0.0301$$
+
+## 7) Congreso
+De un grupo de 6 mujeres y 4 hombres se deben elegir 3 personas para que los representen en tres congresos a desarrollarse en mayo, junio y septiembre.
+
+(a) Suponiendo que una persona puede ir a más de un congreso, calcular la probabilidad de que
+1. a los dos primeros congresos vayan mujeres.
+2. a los dos primeros congresos vayan mujeres y al tercero un hombre.
+3. haya por lo menos una mujer entre las 3 personas elegidas.
+
+(b) Si a cada congreso debe ir una persona diferente, calcular las mismas probabilidades que en **(a)** y además la probabilidad de que haya exactamente una mujer entre las 3 personas elegidas.
+
