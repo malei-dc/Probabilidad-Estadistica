@@ -215,8 +215,49 @@ De un grupo de 6 mujeres y 4 hombres se deben elegir 3 personas para que los rep
 
 (a) Suponiendo que una persona puede ir a más de un congreso, calcular la probabilidad de que
 1. a los dos primeros congresos vayan mujeres.
+    
+    > **NOTA**: asumo que se eligen 1 persona por congreso, antes había entendido que iba 3 persona a cada congreso hasta que leí **(b)**.
+    >
+    > $P$("a los dos primeros congresos vayan mujeres") = $\frac{6}{10} * \frac{6}{10} * \frac{10}{10} = 0.36$
+
 2. a los dos primeros congresos vayan mujeres y al tercero un hombre.
+
+    > $P$("a los dos primeros congresos vayan mujeres y al tercero un hombre") = $\frac{6}{10} * \frac{6}{10} * \frac{4}{10} = 0.144$
+
 3. haya por lo menos una mujer entre las 3 personas elegidas.
+
+    > $P$("haya por lo menos una mujer entre las 3 personas elegidas") = $1 - P$("van al congreso todos hombres") = $1- \frac{4}{10} * \frac{4}{10} * \frac{4}{10} = 0.936$
 
 (b) Si a cada congreso debe ir una persona diferente, calcular las mismas probabilidades que en **(a)** y además la probabilidad de que haya exactamente una mujer entre las 3 personas elegidas.
 
+1. a los dos primeros congresos vayan mujeres.
+    
+    > $P$("a los dos primeros congresos vayan mujeres") = $\frac{6}{10} * \frac{5}{9} * \frac{8}{8} = 0.3333$
+
+2. a los dos primeros congresos vayan mujeres y al tercero un hombre.
+
+    > $P$("a los dos primeros congresos vayan mujeres y al tercero un hombre") = $\frac{6}{10} * \frac{5}{9} * \frac{4}{8} = 0.166$
+
+3. haya por lo menos una mujer entre las 3 personas elegidas.
+
+    > $P$("haya por lo menos una mujer entre las 3 personas elegidas") = $1 - P$("van al congreso todos hombres") = $1- \frac{4}{10} * \frac{3}{9} * \frac{2}{8} = 0.9666$
+
+4. haya exactamente una mujer entre las 3 personas elegidas.
+
+    >Elijo una mujer y dos hombres multiplicando por 3 para alternar congresos $\rightarrow P$("haya exactamente una mujer entre las 3 personas elegidas") = $3 * \frac{4}{10} * \frac{3}{9} * \frac{6}{8} = 0.3$
+
+## 8) Negocio
+En un negocio hay $6$ productos de cierto tipo, $3$ de ellos vencidos y $3$ que están dentro del periodo de validez. Si un supervisor, que no sabe cuántos envases válidos o vencidos hay, los revisa, ¿cuál es la probabilidad de que
+
+(a) los tres primeros envases revisados contengan los productos vencidos?
+
+> $P$("los tres primeros envases revisados contengan los productos vencidos") = $\frac{3}{6} * \frac{2}{5} * \frac{1}{4} = 0.05$
+
+(b) necesite revisar exactamente i envases para encontrar los tres que contienen los productos vencidos? (hacerlo para i = 4, 5, 6).
+
+> Datos:
+>- El número total de maneras de seleccionar 3 productos de los 6 disponibles es $\binom{6}{3}$. 
+>- Si en el $i$-esimo envase encuentro el único vencido que falta entre $6-i+1$ envases
+>   - Si $i = 4$ tengo que encontrar el vencido entre 3 $\rightarrow P(4)= \frac{1}{3} = 0.3333$
+>   - Si $i = 5$ tengo que encontrar el vencido entre 2 $\rightarrow P(5)= \frac{1}{2} = 0.5$
+>   - Si $i = 6$ tengo que encontrar el vencido entre 1 $\rightarrow P(6)= \frac{1}{1} = 1$
