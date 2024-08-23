@@ -1,6 +1,8 @@
 # Práctica 1
 
-## 1) Dado equilibrado
+## Introducción a la probabilidad y teoría de conjuntos
+
+### 1) Dado equilibrado
 Se arroja dos veces un dado equilibrado, registrándose los resultados obtenidos.
 
 (a) Definir un espacio muestral $S$ apropiado para este experimento.
@@ -67,7 +69,7 @@ Se arroja dos veces un dado equilibrado, registrándose los resultados obtenidos
 
 >En el archivo [Practica1.ipynb](https://github.com/malei-dc/PyE/blob/main/Guia-Ejercicios/Practica1/Practica1.ipynb)
 
-## 2) Eventos
+### 2) Eventos
 (a) Dados dos eventos $A$ y $B$ tales que se conocen $P(A \cup B)$ y $P(A \cap B)$, hallar una fórmula para la probabilidad de que ocurra exactamente uno de estos eventos.
 
 > Vamos a descomponer el problema. La probabilidad de que ocurra solamente $A$ pero no $B$ es $P(A \cap B^c)$, analogamente se puede hacer para el evento $B$. Entonces la probabilidad de que ocurra exactamente uno de estos eventos es la suma de $P(A \cap B^c)+P(B \cap A^c)$ 
@@ -92,7 +94,7 @@ Se arroja dos veces un dado equilibrado, registrándose los resultados obtenidos
 
 > Por **(a)** sabemos que: $P(exactamenteUno)= P(A \cup B)  - P(B \cap A) = 0.9 - 0.5 = 0.4$
 
-## 3) Computadora
+### 3) Computadora
 Supongamos que cuando una computadora se “cuelga” (no responde), el 75% de las veces se debe a problemas de memoria y el 15 % de las veces a problemas de software y que el 15 % de las veces se debe a problemas que no son ni de memoria ni de software. Si una computadora se cuelga,
 
 (a) ¿cuál es la probabilidad de que estos dos problemas ocurran simultáneamente?
@@ -113,7 +115,7 @@ Supongamos que cuando una computadora se “cuelga” (no responde), el 75% de l
 
 > Queremos saber $P(B \cap A^c) = P(B) - P(B \cap A) = 0.15 - 0.05 = 0.10$ 
 
-## 4) Bolillero
+### 4) Bolillero
 De un bolillero que contiene $5$ bolillas numeradas $1, 2, 3, 4, 5$ se extrae una al azar, sea la número $k$. Se eliminan las bolillas cuyo número es mayor que $k$ de la urna y se hace una segunda extracción al azar entre las bolillas $1$ a $k$, sea la número $j$. Se eliminan las bolillas cuyo número es mayor que $j$ de la urna y se hace una tercera extracción al azar entre las bolillas $1$ a $j$.
 
 (a) Describir un espacio muestral adecuado para este experimento y determinar el número de elementos que posee.
@@ -142,7 +144,7 @@ De un bolillero que contiene $5$ bolillas numeradas $1, 2, 3, 4, 5$ se extrae un
 > 
 > $$P((5,5,5)) = P(x_1 = 5) * P(x_2 = 5) * P(x_3 = 5) = \frac{1}{5} * \frac{1}{5} * \frac{1}{5} = \frac{1}{125}$$
 
-## 5) Proveedora de software
+### 5) Proveedora de software
 Una firma proveedora de software ha ofrecido sus servicios a $3$ empresas. Se definen los eventos $A_i =$ {la empresa i realiza una compra a esta firma} , para $i = 1, 2, 3$. Se sabe que:
 
 - $P(A_1) = 0.22$
@@ -195,7 +197,7 @@ Expresar en palabras los siguientes eventos y calcular sus probabilidades:
     >$$= 1- (0.22 + 0.25 - 0.11) +0.28 - 0.17 = 0.75$$
     >
 
-## 6) Grupete
+### 6) Grupete
 Un grupo de 60 alumnos será subdividido al azar en dos divisiones de 30 alumnos cada una. Cinco de esos alumnos son muy amigos: Alicia, Beto, Carmen, Diego y Eva.
 
 (a) ¿Cuál es la probabilidad de que todos queden en la misma división?
@@ -210,7 +212,7 @@ Un grupo de 60 alumnos será subdividido al azar en dos divisiones de 30 alumnos
 >
 >$$\frac{\binom{55}{26}}{\binom{60}{30}} \approx 0.0301$$
 
-## 7) Congreso
+### 7) Congreso
 De un grupo de 6 mujeres y 4 hombres se deben elegir 3 personas para que los representen en tres congresos a desarrollarse en mayo, junio y septiembre.
 
 (a) Suponiendo que una persona puede ir a más de un congreso, calcular la probabilidad de que
@@ -246,7 +248,7 @@ De un grupo de 6 mujeres y 4 hombres se deben elegir 3 personas para que los rep
 
     >Elijo una mujer y dos hombres multiplicando por 3 para alternar congresos $\rightarrow P$("haya exactamente una mujer entre las 3 personas elegidas") = $3 * \frac{4}{10} * \frac{3}{9} * \frac{6}{8} = 0.3$
 
-## 8) Negocio
+### 8) Negocio
 En un negocio hay $6$ productos de cierto tipo, $3$ de ellos vencidos y $3$ que están dentro del periodo de validez. Si un supervisor, que no sabe cuántos envases válidos o vencidos hay, los revisa, ¿cuál es la probabilidad de que
 
 (a) los tres primeros envases revisados contengan los productos vencidos?
@@ -261,3 +263,67 @@ En un negocio hay $6$ productos de cierto tipo, $3$ de ellos vencidos y $3$ que 
 >   - Si $i = 4$ tengo que encontrar el vencido entre 3 $\rightarrow P(4)= \frac{1}{3} = 0.3333$
 >   - Si $i = 5$ tengo que encontrar el vencido entre 2 $\rightarrow P(5)= \frac{1}{2} = 0.5$
 >   - Si $i = 6$ tengo que encontrar el vencido entre 1 $\rightarrow P(6)= \frac{1}{1} = 1$
+
+> ESTA MAL, PREGUNTAR
+
+### 9) Cuad unión
+(a) Enunciar y probar una fórmula para $P(A_1 \cup A_2 \cup A_3 \cup A_4)$
+
+> $$P(A_1 \cup A_2 \cup A_3 \cup A_4) = P(A_1) + P(A_2) + P(A_3) + P(A_4)$$
+>
+> $$- P(A_1 \cap A_2) - P(A_1 \cap A_3) - P(A_1 \cap A_4) - P(A_2 \cap A_3) - P(A_2 \cap A_4) - P(A_3 \cap A_4)$$
+> 
+> $$+ P(A_1 \cap A_2 \cap A_3) + P(A_1 \cap A_2 \cap A_4) + P(A_1 \cap A_3 \cap A_4) + P(A_2 \cap A_3 \cap A_4)$$
+>
+> $$- P(A_1 \cap A_2 \cap A_3 \cap A_4)$$
+>
+> Prueba: 
+> 1. Primero, sumamos las probabilidades de los eventos individuales: $P(A_1) + P(A_2) + P(A_3) + P(A_4)$
+> 2. Las intersecciones de dos eventos fueron contadas dos veces en el paso anterior, por lo que restamos las probabilidades de las intersecciones: $- [P(A_1 \cap A_2) + P(A_1 \cap A_3) + P(A_1 \cap A_4) + P(A_2 \cap A_3) + P(A_2 \cap A_4) + P(A_3 \cap A_4)]$
+> 3. Las intersecciones de tres eventos fueron restadas una vez de más en el paso anterior, así que las sumamos nuevamente: $+ P(A_1 \cap A_2 \cap A_3) + P(A_1 \cap A_2 \cap A_4) + P(A_1 \cap A_3 \cap A_4) + P(A_2 \cap A_3 \cap A_4)$
+> 4. Finalmente, la intersección de los cuatro eventos fue sumada una vez de más en el paso anterior, por lo que la restamos: $- P(A_1 \cap A_2 \cap A_3 \cap A_4)$
+
+(b) Cuatro matrimonios deciden bailar un tango, eligiendo las mujeres a sus compañeros al azar.
+1. ¿Cuál es la probabilidad de que la mujer $i$ (fijo) elija a su esposo como pareja de baile; $i=1,2,3,4$?
+
+    > La probabilidad de que la mujer $i$ elija al azar y que resulte ser su esposo es de $\frac{1}{4} = 25\% $
+
+2. ¿Cuál es la probabilidad de que al menos 1 mujer elija a su esposo?
+
+    > Hmmm
+
+(c) Estimar las probabilidades del item **b)** por medio de una simulación. Compare con los resultados obtenidos en **b)**.
+
+## Probabilidad condicional
+
+### 10) Nivel de ingresos
+Un estudio sobre la relación entre nivel de ingresos (A=alto, M=medio, B=bajo) y la preferencia por una de las tres grandes marcas de automóviles (Y,W,Z) da como resultado la siguiente tabla de probabilidades conjuntas.
+
+| | B | M | A | | |  
+|:---------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
+| Y | 0.10 | 0.13 | 0.02 || 0.25 |
+| W | 0.20 | 0.12 | 0.08 || 0.40 |
+| Z | 0.10 | 0.15 | 0.10 || 0.35 | 
+| | | | | | |
+| | 0.40 | 0.40 | 0.20 || 1.00 |
+
+Esta tabla muestra por ejemplo que: 
+- $P$(ingreso bajo y preferencia $Y$ ) = $P (B \cap Y ) = 0.10$
+- $P$(ingreso bajo) = $P(B) = 0.40$
+- $P$(preferencia $Y$) = $P(Y) = 0.25$
+
+(a) En base a esta tabla calcular las siguientes probabilidades condicionales:
+
+- $P(W|A)$
+
+- $P(M|Z)$
+
+- $P(Y^c|M)$
+
+- $P(M|Y^c)$
+
+- $P(M|W \cup Z)$
+
+- $P(B \cup M|Z)$
+
+(b) ¿Cuál es la probabilidad de que una persona elegida al azar prefiera la marca $Y$ o tenga un alto ingreso?
