@@ -316,14 +316,93 @@ Esta tabla muestra por ejemplo que:
 
 - $P(W|A)$
 
+    > Tengo que calcular la probabilidad de que la persona tenga de preferencia $W$ siendo  alto su nivel de ingreso ($A$).
+    >
+    > $P(W|A) = \frac{P(W \cap A)}{P(A)} = \frac{0.08}{0.20} = 0.4$
+
 - $P(M|Z)$
+
+    > Tengo que calcular la probabilidad de que la persona tenga un nivel de ingreso $M$ siendo que tiene preferencia $Z$.
+    >
+    > $P(M|Z) = \frac{P(M \cap Z)}{P(Z)} = \frac{0.15}{0.35} = 0.4285$
+
 
 - $P(Y^c|M)$
 
+    > Tengo que calcular la probabilidad de que no tiene preferencia $Y$ siendo de ingresos medios ($M$).
+    >
+    > $P(Y^c|M) = \frac{P(Y^c \cap M)}{P(M)} = \frac{0.27}{0.40} = 0.675$
+
 - $P(M|Y^c)$
+
+    > Tengo que calcular la probabilidad de que sea de ingreso medio ($M$) sabiendo que no tiene de preferencia $Y$.
+    >
+    > $P(M|Y^c) = \frac{P(M \cap Y^c)}{P(Y^c)} = \frac{0.27}{0.75} = 0.36$
 
 - $P(M|W \cup Z)$
 
+    > Tengo que calcular la probabilidad de que de ingreso medio ($M$) sabiendo que tiene de preferencia a $W$ o $Z$.
+    >
+    > $P(M|W \cup Z) = \frac{P(M \cap (W \cup Z))}{P(W \cup Z)} = \frac{0.12+0.15}{0.75} = 0.36$
+
 - $P(B \cup M|Z)$
 
+    > Tengo que calcular la probabilidad de que alguien tenga los ingresos bajos o medio sabiendo que tiene la preferencia $Z$
+    >
+    > $P(B \cup M|Z) = \frac{P((B \cup M) \cap Z)}{P(Z)} = \frac{0.10 + 0.15}{0.35} = 0.7142$
+
 (b) ¿Cuál es la probabilidad de que una persona elegida al azar prefiera la marca $Y$ o tenga un alto ingreso?
+
+> $P(Y \cup A) = P(Y) + P(A) - P(Y \cap A) = 0.25 + 0.20 - 0.02 = 0.43$
+
+### 11) Dos dados equilibrados
+Una persona arroja dos dados equilibrados. Calcular la probabilidad de que la suma sea 7 dado que
+
+> $S =$ "arroja dos dados equilibrados"$= \{ (x_1, x_2) | 1 \leq x_1, x_2 \leq 6 \} \rightarrow |S| = 36$
+>
+> $A =$ "la suma sea 7" $= \{ (x_1, x_2) | x_1 + x_2 = 7 \} = \{ (1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1) \} \rightarrow |A|=6$ 
+
+(a) la suma es impar.
+
+> $B =$ "la suma es impar" $=\{ (x_1, x_2)|(x_1 \text{ impar } \land x_2 \text{ par }) \lor (x_2 \text{ impar } \land x_1 \text{ par }) \} \rightarrow |B| = 36/2 = 18$
+>
+> Queremos calcular $P(A|B)$, notar que $A \subset B$, así que $P(A \cap B) = \frac{6}{36} = 0.1666$
+>
+> $P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{\frac{6}{36}}{\frac{18}{36}} = \frac{1}{3} = 0.3333$
+
+(b) la suma es mayor que 6.
+
+> $C =$ "la suma es mayor que 6" $= \{ (1, 6), (2, 6...5), (3, 6...4), (4, 6...3), (5, 6...2), (6,1...6) \} \rightarrow |C|= 1+2+3+4+5+6 = 21$
+>
+> Queremos calcular $P(A|C)$, notar que $A \subset C$, así que $P(A \cap C) = \frac{6}{36} = 0.1666$
+>
+> $P(A|C) = \frac{P(A \cap C)}{P(C)} = \frac{\frac{6}{36}}{\frac{21}{36}} = \frac{6}{21} = 0.2857$
+
+(c) el número del segundo dado es par.
+
+> $D =$ "el número del segundo dado es par" $= \{ (x_1, x_2| x_2 \text{ par}) \} \rightarrow |D| = 6*3 = 18$
+>
+> Queremos calcular $P(A|D)$, sabemos que $A \cap D = \{ (1, 6), (3, 4), (5, 2) \} $
+> 
+> $P(A|D) = \frac{P(A \cap D)}{P(D)} = \frac{\frac{3}{36}}{\frac{18}{36}} = \frac{1}{6} = 0.1666$
+
+(d) el número de alguno de los dados es impar.
+
+> $E =$ "el número de alguno de los dados es impar" $= \{ (x_1, x_2)| x_1 \text{ impar } \lor x_2 \text{ impar} \} \rightarrow |E| = 36 - |E^c| (\{ (x_1, x_2)| x_1 \text{ par } \land x_2 \text{ par } \} ) = 36 - (3*3) = 27$ 
+>
+> Queremos calcular $P(A|E)$, notar que $A \subset E$, así que $P(A \cap E) = \frac{6}{36} = 0.1666$
+>
+> $P(A|E) = \frac{P(A \cap E)}{P(E)} = \frac{\frac{6}{36}}{\frac{27}{36}} = \frac{2}{9} = 0.2222$
+
+(e) los números de los dados son iguales.
+
+> $F =$ "los números de los dados son iguales" $= \{ (x_1, x_2)| x_1 = x_2 \} \rightarrow |F| = 6$
+>
+> Sabemos que si los dos dados suman 7 no pueden ser numero iguales, por eso $P(A|F) = 0$, ya que $A \cap F = \empty$. 
+
+(f) Estime las probabildades de los items anteriores por medio de una simulación.
+
+>En el archivo [Practica1.ipynb](https://github.com/malei-dc/PyE/blob/main/Guia-Ejercicios/Practica1/Practica1.ipynb)
+
+### 12) Tres dados
+Se lanzan 3 dados. Si ninguno muestra la misma cara, ¿cuál es la probabilidad de que haya salido exactamente un as?
