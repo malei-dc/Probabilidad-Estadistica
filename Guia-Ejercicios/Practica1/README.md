@@ -409,9 +409,9 @@ Se lanzan 3 dados. Si ninguno muestra la misma cara, ¿cuál es la probabilidad 
 
 > **Nota**: un "as" en dados quiere decir que sale el número $1$.
 >
-> $S =$ "Tiramos 3 dados" $= \{ (x_1, x_2, x_3)| 1 \leq x_1,x_2,x_3 \leq 6 \} \rightarrow |S| = 6*6*6 = 216$
+> $S =$ "Tiramos 3 dados" $= \{ (x_1, x_2, x_3)| 1 \leq x_1,x_2,x_3 \leq 6 \} \rightarrow |S| = 6 * 6 * 6 = 216$
 >
-> $A =$ "ninguno muestra la misma cara" $= \{ (x_1, x_2, x_3)| x_1 \neq x_2 \neq x_3 \} \rightarrow |S| = 6*5*4 = 120$
+> $A =$ "ninguno muestra la misma cara" $= \{ (x_1, x_2, x_3)| x_1 \neq x_2 \neq x_3 \} \rightarrow |S| = 6 * 5 * 4 = 120$
 >
 > $B =$ "haya salido exactamente un as" 
 >
@@ -436,6 +436,7 @@ Un sistema de computación on-line tiene 4 lı́neas de entrada para comunicaci�
 > Tenemos que calcular $P(S)$. Usamos el teorema de la probabilidad total ya que $L_1, L_2, L_3, L_4$ son particiones de nuestro espacio muestral $S$.
 >
 > $$P(S) = P(L_1) * P(S/L_1) + P(L_2) * P(S/L_2) + P(L_3) * P(S/L_3) + P(L_4) * P(S/L_4) = $$
+>
 > $$= 0.4 * 0.998 + 0.3 * 0.999 + 0.1 * 0.997 + 0.2 * 0.992 = 0.997 $$
 
 (b) ¿Cuál es la probabilidad de que, si el mensaje entró con error, haya ingresado por la lı́nea 1?
