@@ -9,5 +9,6 @@ Cursada 2C2024 de Probabilidad y Estadística UBA
 ## Clases prácticas
 
 - 16-08-24: [Enunciado](https://github.com/malei-dc/PyE/blob/main/Practicas/02-Probabilidad.pdf) - [Resolución](https://github.com/malei-dc/PyE/blob/main/Practicas/02-Probabilidad.md)
+- 23-08-24: [Enunciado](https://github.com/malei-dc/PyE/blob/main/Practicas/03-proba_condicional.pdf) - [Resolución](https://github.com/malei-dc/PyE/blob/main/Practicas/03-proba_condicional.md)
 
 ## Clases [teóricas](https://github.com/malei-dc/PyE/tree/main/Teoricas)

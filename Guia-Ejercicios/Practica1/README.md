@@ -358,7 +358,7 @@ Esta tabla muestra por ejemplo que:
 ### 11) Dos dados equilibrados
 Una persona arroja dos dados equilibrados. Calcular la probabilidad de que la suma sea 7 dado que
 
-> $S =$ "arroja dos dados equilibrados"$= \{ (x_1, x_2) | 1 \leq x_1, x_2 \leq 6 \} \rightarrow |S| = 36$
+> $S =$ "arroja dos dados equilibrados" $= \{ (x_1, x_2) | 1 \leq x_1, x_2 \leq 6 \} \rightarrow |S| = 36$
 >
 > $A =$ "la suma sea 7" $= \{ (x_1, x_2) | x_1 + x_2 = 7 \} = \{ (1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1) \} \rightarrow |A|=6$ 
 
@@ -398,7 +398,7 @@ Una persona arroja dos dados equilibrados. Calcular la probabilidad de que la su
 
 > $F =$ "los números de los dados son iguales" $= \{ (x_1, x_2)| x_1 = x_2 \} \rightarrow |F| = 6$
 >
-> Sabemos que si los dos dados suman 7 no pueden ser numero iguales, por eso $P(A|F) = 0$, ya que $A \cap F = \empty$. 
+> Sabemos que si los dos dados suman 7 no pueden ser numero iguales, por eso $P(A|F) = 0$, ya que $A \cap F = \emptyset$. 
 
 (f) Estime las probabildades de los items anteriores por medio de una simulación.
 
@@ -406,3 +406,47 @@ Una persona arroja dos dados equilibrados. Calcular la probabilidad de que la su
 
 ### 12) Tres dados
 Se lanzan 3 dados. Si ninguno muestra la misma cara, ¿cuál es la probabilidad de que haya salido exactamente un as?
+
+> **Nota**: un "as" en dados quiere decir que sale el número $1$.
+>
+> $S =$ "Tiramos 3 dados" $= \{ (x_1, x_2, x_3)| 1 \leq x_1,x_2,x_3 \leq 6 \} \rightarrow |S| = 6*6*6 = 216$
+>
+> $A =$ "ninguno muestra la misma cara" $= \{ (x_1, x_2, x_3)| x_1 \neq x_2 \neq x_3 \} \rightarrow |S| = 6*5*4 = 120$
+>
+> $B =$ "haya salido exactamente un as" 
+>
+> Necesitamos calcular $P(B|A)$,  pero primero calculemos $A \cap B =$ "ninguno muestra la misma cara y salió exactamente un 1". Para calcular esto tengo en cuenta que el 1 puede salir en el primer dado, en el segundo o en el tercero y no pueden salir la misma cara en ninguno de los dados. $|A \cap B| = (1 * 5 * 4) + (5 * 1 * 4) + (5 * 4 * 1) = 60$
+>
+> $P(B|A) = \frac{P(A \cap B)}{P(B)} = \frac{\frac{60}{216}}{\frac{120}{216}} = \frac{1}{2} = 0.5$
+
+### 13) Computación online
+Un sistema de computación on-line tiene 4 lı́neas de entrada para comunicación. Cada lı́nea cubre un porcentaje del tráfico de entrada y cada lı́nea tiene un porcentaje de mensajes que ingresan con error. La tabla a continuación describe estos porcentajes:
+
+> Sea $S$ el evento de los mensajes que entran sin error por cualquier línea.
+
+|Línea|% de mensajes que entra por la Lı́nea|% de mensajes sin error|
+|:---------:|:-----------:|:-----------:|
+|1|$P(L_1) =$ 40%|$P(S/L_1) =$ 99.8%|
+|2|$P(L_2) =$ 30%|$P(S/L_2) =$ 99.9%|
+|3|$P(L_3) =$ 10%|$P(S/L_3) =$ 99.7%|
+|4|$P(L_4) =$ 20%|$P(S/L_4) =$ 99.2%|
+
+(a) ¿Cuál es la probabilidad de que al elegir al azar un mensaje, éste haya ingresado sin error?
+
+> Tenemos que calcular $P(S)$. Usamos el teorema de la probabilidad total ya que $L_1, L_2, L_3, L_4$ son particiones de nuestro espacio muestral $S$.
+>
+> $$P(S) = P(L_1) * P(S/L_1) + P(L_2) * P(S/L_2) + P(L_3) * P(S/L_3) + P(L_4) * P(S/L_4) = $$
+> $$= 0.4 * 0.998 + 0.3 * 0.999 + 0.1 * 0.997 + 0.2 * 0.992 = 0.997 $$
+
+(b) ¿Cuál es la probabilidad de que, si el mensaje entró con error, haya ingresado por la lı́nea 1?
+
+> Sea $S^c$ el evento de los mensajes que entran con error por cualquier línea. $P(S^c) = 1 - P(S) = 1 - 0.997 = 0.003$
+>
+> Quiero calcular $P(L_1|S^c) = \frac{P(S^c|L_1)*P(L_1)}{P(S^c)} = \frac{(1-0.998)*0.4}{0.003} = 0.2666$
+
+### 14) Caja con tres monedas
+Una caja contiene tres monedas, una de las cuales tiene dos caras, otra tiene dos cruces (o cecas) y la tercera es una moneda normal. Se extrae de la caja una moneda al azar y se arroja, obteniéndose una cara.
+
+(a) ¿Cuál es la probabilidad de haber elegido la moneda con dos caras?
+
+(b) Si se arroja nuevamente la moneda extraı́da, ¿cuál es la probabilidad de obtener otra vez cara?
