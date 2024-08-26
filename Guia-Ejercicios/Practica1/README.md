@@ -450,4 +450,29 @@ Una caja contiene tres monedas, una de las cuales tiene dos caras, otra tiene do
 
 (a) ¿Cuál es la probabilidad de haber elegido la moneda con dos caras?
 
+> - $M_1:$ "elegir moneda dos caras"
+> - $M_2:$ "elegir moneda dos cruces"
+> - $M_3:$ "elegir moneda normal"
+> - $X:$ "obtener cara al tirar una moneda"
+>
+> Sabemos que la probabilidad de que salga cara con una moneda de caras es 1 y la probabilidad de que salga cara en una moneda normal es 0.5. Calculamos usando el teorema de la probabilidad total $P(X) = P(X|M_1) * P(M_1) + P(X|M_2) * P(M_2) + P(X|M_3) * P(M_3) = 1 * \frac{1}{3} + 0 * \frac{1}{3} + 0.5 * \frac{1}{3} = \frac{1}{2} = 0.5$
+>
+> Calculamos usando el teorema de bayes $P(M_1|X) = \frac{P(X|M_1) * P(M_1)}{P(X)} = \frac{1 * \frac{1}{3}}{\frac{1}{2}} = \frac{2}{3}$
+
 (b) Si se arroja nuevamente la moneda extraı́da, ¿cuál es la probabilidad de obtener otra vez cara?
+
+> Sabemos de la primera tirada: 
+> - $P(M_1|X) = \frac{2}{3}$
+> - $P(M_3|X) = \frac{1}{3}$ (haciendo complemento de arriba, no consideramos $M_2$ ya que no puede salir cara)
+>
+> Sea $Y:$ "sale cara en la segunda tirada"
+>
+> La probabilidad de volver a sacar cara es la suma de probabilidad de sacar cara en respectivos monedas por la probabilidad de la moneda que haya sido sacada sabiendo que la primera tirada fue cara.
+>
+> $$P(Y) = P(X|M_1) * P(M_1|X) + P(X|M_3) * P(M_3|X) = 1 * \frac{2}{3} + 0.5 * \frac{1}{3} = \frac{5}{6} = 0.8333$$
+
+### 15) Enfermedad
+Una enfermedad afecta a una de cada 500 personas de cierta población. Se usa un examen radiológico para detectar posibles enfermos. Se sabe que la probabilidad de que el examen aplicado a un enfermo lo muestre como tal es 0.90 y que la probabilidad
+de que el examen aplicado a una persona sana la muestre como enferma es 0.01. 
+
+Calcular la probabilidad de que una persona esté realmente enferma si su examen dio positivo.
