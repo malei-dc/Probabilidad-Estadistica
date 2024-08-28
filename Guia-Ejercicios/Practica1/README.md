@@ -476,3 +476,12 @@ Una enfermedad afecta a una de cada 500 personas de cierta población. Se usa un
 de que el examen aplicado a una persona sana la muestre como enferma es 0.01. 
 
 Calcular la probabilidad de que una persona esté realmente enferma si su examen dio positivo.
+
+> Sea $A =$ "una persona enferma" y $B =$ "el examen sale positivo". Sabemos que $P(B|A) = 0.9$ y que $P(B|A^c)=0.01$ 
+>
+> Queremos calcular $P(A|B) = \frac{P(A \cap B)}{P(B)}$ como sabemos que $P(A) = \frac{1}{500} = 0.002 > 0$ podemos aplicar la regla del producto en el numerador $ = \frac{P(B|A) * P(A)}{P(B)}$ en el denominador aplicamos el teorema de la probabilidad total, nos queda entonces $ = \frac{P(B|A) * P(A)}{P(B|A) * P(A) + P(B|A^c) * P(A^c)} = \frac{0.9 * 0.002}{0.9 * 0.002 + 0.01 * (1-0.002)} = 0.1528$.
+>
+> De hecho esto de aplicar en el numerador la regla del producto y en el denominador el teorema de la probabilidad total se llama **teorema de bayes**
+
+### 16) Tres cajas
+Hay tres cajas $A, B y C$ con 20 piezas cada una, conteniendo 20, 15 y 10 piezas buenas respectivamente. La probabilidad de elegir la caja $A$ es igual a la de elegir la caja $B$, y la de elegir la caja $C$ es igual a la suma de esas dos probabilidades. Eligiendo al azar una caja se extraen con reposición dos piezas que resultan ser buenas. Hallar la probabilidad condicional de que provengan de la caja $A$.
