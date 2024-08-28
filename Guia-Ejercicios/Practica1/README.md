@@ -479,9 +479,31 @@ Calcular la probabilidad de que una persona esté realmente enferma si su examen
 
 > Sea $A =$ "una persona enferma" y $B =$ "el examen sale positivo". Sabemos que $P(B|A) = 0.9$ y que $P(B|A^c)=0.01$ 
 >
-> Queremos calcular $P(A|B) = \frac{P(A \cap B)}{P(B)}$ como sabemos que $P(A) = \frac{1}{500} = 0.002 > 0$ podemos aplicar la regla del producto en el numerador $ = \frac{P(B|A) * P(A)}{P(B)}$ en el denominador aplicamos el teorema de la probabilidad total, nos queda entonces $= \frac{P(B|A) * P(A)}{P(B|A) * P(A) + P(B|A^c) * P(A^c)} = \frac{0.9 * 0.002}{0.9 * 0.002 + 0.01 * (1-0.002)} = 0.1528$.
+> Queremos calcular $P(A|B) = \frac{P(A \cap B)}{P(B)}$ como sabemos que $P(A) = \frac{1}{500} = 0.002 > 0$ podemos aplicar la regla del producto en el numerador $= \frac{P(B|A) * P(A)}{P(B)}$ en el denominador aplicamos el teorema de la probabilidad total, nos queda entonces $= \frac{P(B|A) * P(A)}{P(B|A) * P(A) + P(B|A^c) * P(A^c)} = \frac{0.9 * 0.002}{0.9 * 0.002 + 0.01 * (1-0.002)} = 0.1528$.
 >
 > De hecho esto de aplicar en el numerador la regla del producto y en el denominador el teorema de la probabilidad total se llama **teorema de bayes**
 
 ### 16) Tres cajas
-Hay tres cajas $A, B y C$ con 20 piezas cada una, conteniendo 20, 15 y 10 piezas buenas respectivamente. La probabilidad de elegir la caja $A$ es igual a la de elegir la caja $B$, y la de elegir la caja $C$ es igual a la suma de esas dos probabilidades. Eligiendo al azar una caja se extraen con reposición dos piezas que resultan ser buenas. Hallar la probabilidad condicional de que provengan de la caja $A$.
+Hay tres cajas $A, B$ y $C$ con 20 piezas cada una, conteniendo 20, 15 y 10 piezas buenas respectivamente. La probabilidad de elegir la caja $A$ es igual a la de elegir la caja $B$, y la de elegir la caja $C$ es igual a la suma de esas dos probabilidades. Eligiendo al azar una caja se extraen con reposición dos piezas que resultan ser buenas. Hallar la probabilidad condicional de que provengan de la caja $A$.
+
+> Sean $A =$ "elegir caja A", $B =$ "elegir caja B" y $C =$ "elegir caja C". Sabemos que $P(A) + P(B) + P(C) = 1$, como nos dicen que $P(A) = P(B)$ y $P(C) = P(A) + P(B)$ reemplazando en la cuenta nos da:
+>
+>$$P(A) + P(B) + P(C) = P(A) + P(B) + (P(A) + P(B)) = 4 * P(A) = 1 \rightarrow P(A) = \frac{1}{4}$$
+>
+> Y con esto sabemos que $P(B) = \frac{1}{4}$ y $P(C) = \frac{1}{2}$.
+>
+> Definimos el evento $X = $ "extrae dos piezas buenas", teniendo en cuenta que es con reposición y sabiendo la cantidad de piezas buenas en cada caja, aplicamos el teorema de bayes, donde extraer dos piezas buenas es el producto de la relacion de pieza buena con pieza totales dos veces por la chance de elegir respectiva caja.
+>
+> $$P(A|X) = \frac{P(X|A) * P(A)}{P(X|A) * P(A) + P(X|B) * P(B) + P(X|C) * P(C)} = \frac{1 * \frac{1}{4}}{1 * \frac{1}{4} + (\frac{15}{20})^2 * \frac{1}{4} + (\frac{10}{20})^2 * \frac{1}{2}} = 0.4848$$
+
+### 17) Dos urnas
+Se dispone de dos urnas, cuyo contenido es el siguiente:
+
+- Urna $A$: 5 bolitas rojas y 3 blancas.
+- Urna $B$: 1 bolita roja y 2 blancas.
+
+Se arroja un dado equilibrado. Si sale 3 ó 6 se extrae una bolita de la urna $A$ y se la coloca en $B$, luego se saca una bolita de $B$. En caso contrario el proceso se hace a la inversa.
+
+(a) Hallar la probabilidad de que ambas bolitas sean rojas.
+
+(b) Si ambas bolitas son rojas, ¿cuál es la probabilidad de que haya salido 3 ó 6?
