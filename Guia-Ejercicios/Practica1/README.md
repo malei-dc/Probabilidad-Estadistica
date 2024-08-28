@@ -479,7 +479,7 @@ Calcular la probabilidad de que una persona esté realmente enferma si su examen
 
 > Sea $A =$ "una persona enferma" y $B =$ "el examen sale positivo". Sabemos que $P(B|A) = 0.9$ y que $P(B|A^c)=0.01$ 
 >
-> Queremos calcular $P(A|B) = \frac{P(A \cap B)}{P(B)}$ como sabemos que $P(A) = \frac{1}{500} = 0.002 > 0$ podemos aplicar la regla del producto en el numerador $ = \frac{P(B|A) * P(A)}{P(B)}$ en el denominador aplicamos el teorema de la probabilidad total, nos queda entonces $ = \frac{P(B|A) * P(A)}{P(B|A) * P(A) + P(B|A^c) * P(A^c)} = \frac{0.9 * 0.002}{0.9 * 0.002 + 0.01 * (1-0.002)} = 0.1528$.
+> Queremos calcular $P(A|B) = \frac{P(A \cap B)}{P(B)}$ como sabemos que $P(A) = \frac{1}{500} = 0.002 > 0$ podemos aplicar la regla del producto en el numerador $ = \frac{P(B|A) * P(A)}{P(B)}$ en el denominador aplicamos el teorema de la probabilidad total, nos queda entonces $= \frac{P(B|A) * P(A)}{P(B|A) * P(A) + P(B|A^c) * P(A^c)} = \frac{0.9 * 0.002}{0.9 * 0.002 + 0.01 * (1-0.002)} = 0.1528$.
 >
 > De hecho esto de aplicar en el numerador la regla del producto y en el denominador el teorema de la probabilidad total se llama **teorema de bayes**
 
