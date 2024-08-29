@@ -506,4 +506,56 @@ Se arroja un dado equilibrado. Si sale 3 ó 6 se extrae una bolita de la urna $A
 
 (a) Hallar la probabilidad de que ambas bolitas sean rojas.
 
+> Sean $A =$ "sale 3 o 6" y $X_i =$ "sacar bolita roja en extracción $i$".
+>
+> Sabemos que $P(A) = \frac{1}{3}$ y que $P(A^c) = \frac{2}{3}$. Para calcular $P(X_i)$ va a depende de $A$, es decir si sale el 3 o 6 entonces $P(X_1)= \frac{5}{8}$ ya que en la urna A hay 5 bolitas rojas de 8, siguiendo los paso, si colocamos una bolita de la urna $A$ a $B$, si es una bolita roja entonces $P(X_2)= \frac{1}{2}$ ya que habría 2 bolitas rojas de cuatro, si no, sería $P(X_2)= \frac{1}{4}$. Y así con los casos para $A^c$
+> 
+> Aplicamos regla de producto para todas las etapas sabiendo que $P(X_1 \cap X_2) > 0$ para cualquier caso ya que hay al menos una bolita roja en cada urna.
+>
+> $$P(X_1 \cap X_2) = P(X_1 \cap X_2 \cap A) + P(X_1 \cap X_2 \cap A^c)$$
+>
+> $$= P(X_2 | (X_1 \cap A)) * P(X_1|A) * P(A) + P(X_2 | (X_1 \cap A^c)) * P(X_1|A^c) * P(A^c)$$
+>
+> $$= \frac{2}{4} * \frac{5}{8} * \frac{1}{3} + \frac{6}{9} * \frac{1}{3} * \frac{2}{3} = \frac{109}{432} = 0.2523$$ 
+
+
 (b) Si ambas bolitas son rojas, ¿cuál es la probabilidad de que haya salido 3 ó 6?
+
+> Pide $P(A|(X_1 \cap X_2)) = \frac{P(A \cap X_1 \cap X_2)}{P(X_1 \cap X_2)} = \frac{P(X_2 | (X_1 \cap A)) * P(X_1|A) * P(A)}{P(X_1 \cap X_2)} = \frac{\frac{2}{4} * \frac{5}{8} * \frac{1}{3}}{\frac{109}{432}} = \frac{45}{109} = 0.4128$
+
+### 18) Generalización urnas
+Se tienen $(n + 1)$ urnas numeradas $0, 1, . . . , n$. La urna $i$ contiene $i$ bolitas blancas y $(n − i)$ bolitas negras. Se elige al azar una urna y de ella se extrae una bolita al azar. Sugerencia: usar $\sum_{i=1}^{n} i = \frac{n * (n+1)}{2}$
+
+> Tenemos urnas $U_i$ con bolitas $(B = Blancas, N = Negras)$
+>
+> - $i = 0 \rightarrow U_0(B=0, N=n-0)$
+> - $i = 1 \rightarrow U_1(B=1, N=n-1)$
+> - $i = 2 \rightarrow U_2(B=2, N=n-2)$
+> - ...
+> - $i = n \rightarrow U_n(B=n, N=n-n)$ 
+
+(a) Calcular la probabilidad de que la bolita extraı́da sea blanca.
+
+> Usamos el teorema de la probabilidad total ya que vemos que hay $n+1$ particiones del espacio muestral. 
+>
+>$$P(B) = \sum_{i = 0}^{n}P(B|U_i) * P(U_i) = \sum_{i = 0}^{n} \frac{i}{n} * \frac{1}{n+1} = \sum_{i = 0}^{n} i * \frac{1}{n*(n+1)} =$$
+>
+> Acá es donde usamos la sugerencia de la suma de gauss
+>
+>$$= \frac{n * (n+1)}{2} * \frac{1}{n*(n+1)} = \frac{1}{2} = 0.5$$
+
+(b) Si la bolita extraı́da es blanca, calcular la probabilidad de que provenga de la urna i, (i = 0,1, . . . , n).
+
+> $P(U_i|B) = \frac{P(B \cap U_i) * P(U_i)}{P(B)} = \frac{\frac{i}{n} * \frac{1}{n+1}}{\frac{1}{2}} = \frac{2i}{n*(n+1)}$
+
+### 19) Independencia de sucesos
+Se extrae al azar una bolita de una urna que contiene 9 bolitas de las cuales 3 son blancas, 3 son negras y 3 son rojas. Las bolitas están numeradas 1, 2 y 3 dentro de cada color y además las siguientes bolitas están rayadas: número uno color blanco,
+número dos color negro y número tres color rojo. Sean los sucesos:
+
+- $A$: la bolita es número uno.
+- $B$: la bolita es blanca.
+- $C$: la bolita es rayada.
+
+(a) ¿Son independientes de a pares los sucesos A, B y C?
+
+(b) ¿Son independientes los sucesos A, B y C?
