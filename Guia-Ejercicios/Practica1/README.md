@@ -549,13 +549,56 @@ Se tienen $(n + 1)$ urnas numeradas $0, 1, . . . , n$. La urna $i$ contiene $i$ 
 > $P(U_i|B) = \frac{P(B \cap U_i) * P(U_i)}{P(B)} = \frac{\frac{i}{n} * \frac{1}{n+1}}{\frac{1}{2}} = \frac{2i}{n*(n+1)}$
 
 ### 19) Independencia de sucesos
-Se extrae al azar una bolita de una urna que contiene 9 bolitas de las cuales 3 son blancas, 3 son negras y 3 son rojas. Las bolitas están numeradas 1, 2 y 3 dentro de cada color y además las siguientes bolitas están rayadas: número uno color blanco,
-número dos color negro y número tres color rojo. Sean los sucesos:
+Se extrae al azar una bolita de una urna que contiene 9 bolitas de las cuales 3 son blancas, 3 son negras y 3 son rojas. Las bolitas están numeradas 1, 2 y 3 dentro de cada color y además las siguientes bolitas están rayadas: número uno color blanco, número dos color negro y número tres color rojo. Sean los sucesos:
 
 - $A$: la bolita es número uno.
 - $B$: la bolita es blanca.
 - $C$: la bolita es rayada.
 
-(a) ¿Son independientes de a pares los sucesos A, B y C?
+> Notar que $P(A) = \frac{1}{3}$, $P(B) = \frac{1}{3}$ y $P(C) = \frac{1}{3}$
+
+(a) ¿Son independientes de a pares los sucesos $A$, $B$ y $C$?
+
+> Para ver que los sucesos de a pares son independiente tenemos que calcular la probabilidad de cada par y ver que sea igual que al producto de sus probabilidades individuales. Es decir:
+>
+> - $P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{\frac{1}{9}}{\frac{1}{3}} \rightarrow P(A \cap B)= P(A|B) * P(B) = \frac{1}{3} * \frac{1}{3} = \frac{1}{9} = P(A) * P(B)$
+> - $P(A|C) = \frac{P(A \cap C)}{P(C)} = \frac{\frac{1}{9}}{\frac{1}{3}} \rightarrow P(A \cap C)= P(A|C) * P(C) = \frac{1}{3} * \frac{1}{3} = \frac{1}{9} = P(A) * P(C)$
+> - $P(B|C) = \frac{P(A \cap C)}{P(C)} = \frac{\frac{1}{9}}{\frac{1}{3}} \rightarrow P(B \cap C)= P(B|C) * P(C) = \frac{1}{3} * \frac{1}{3} = \frac{1}{9} = P(B) * P(C)$
+>
+> Con esto conluimos que los sucesos de a pares son independientes entre sí.
 
 (b) ¿Son independientes los sucesos A, B y C?
+
+> Para ver si los tres son independientes hay que ver $P(A \cap B \cap C) = \frac{1}{9} \neq \frac{1}{27} = P(A) * P(B) * P(C)$
+
+### 20) Sistema de componentes  
+Considérese un sistema de componentes conectados como lo muestra la Figura 1. Los componentes 1 y 2 están conectados en paralelo, de manera que el subsistema funciona si y sólo si cualquiera de ellos funciona; en cambio los componentes 3 y 4 están conectados en serie y por lo tanto este subsistema funciona si y sólo si ambos funcionan. El sistema funciona si al menos uno de los dos subsistemas funciona. Si los componentes trabajan independientemente y la probabilidad de que un componente cualquiera funcione es 0.9,
+
+(a) calcular la probabilidad de que el sistema funcione.
+
+> Sea el evento $C_i:$ "el componente $i$ funciona" y sabiendo $P(C_i) = 0.9$ siendo independientes. Necesitamos calcular $P(S)$ siendo que el sistema funciona cuando los dos subistemas funciona.
+>
+> $$P(S) = P((C_1 \cup C_2) \cup (C_3 \cap C_4)) =$$
+>
+> $$= P(C_1 \cup C_2) + P(C_3 \cap C_4) - P((C_1 \cup C_2) \cap (C_3 \cap C_4))=$$
+>
+> $$= P(C_1) + P(C_2) - P(C_1 \cap C_2) + P(C_3 \cap C_4) - [P((C_1 \cap C_3 \cap C_4) \cup (C_2 \cap C_3 \cap C_4))]=$$
+>
+> $$= P(C_1) + P(C_2) - P(C_1 \cap C_2) + P(C_3 \cap C_4) - [P(C_1 \cap C_3 \cap C_4) + P(C_2 \cap C_3 \cap C_4) - P(C_1 \cap C_3 \cap C_4 \cap C_2)]=$$
+>
+> $$= 0.9 + 0.9 - 0.9 * 0.9 + 0.9 * 0.9 - (0.9 * 0.9 * 0.9 + 0.9 * 0.9 * 0.9 - 0.9 * 0.9 * 0.9 * 0.9) = 0.9981$$
+
+(b) calcular la probabilidad de que el componente 1 no funcione si se sabe que el sistema sı́ funciona.
+
+> $P(C_1^c | S) = 1 - P(C_1|S) = 1 - \frac{P(S|C_1) * P(C_1)}{P(S)} = 1 - \frac{1 * 0.9}{0.9981}= 0,09828$
+
+### 21) $n$ sucesos independientes
+Sean $S_1 , . . . , S_n$ sucesos independientes tales que $P(S_i) = p_i$.
+
+(a) Expresar en función de los pi la probabilidad de que de los Si ocurra:
+
+- ninguno.
+- al menos uno.
+- exactamente uno.
+
+(b) Para $k = 0, . . . , n$, hallar la probabilidad de que ocurran exactamente $k$ de los sucesos $S_i$ en el caso en que $P(S_i) = p$ para todo $i$.
