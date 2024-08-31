@@ -492,7 +492,7 @@ Hay tres cajas $A, B$ y $C$ con 20 piezas cada una, conteniendo 20, 15 y 10 piez
 >
 > Y con esto sabemos que $P(B) = \frac{1}{4}$ y $P(C) = \frac{1}{2}$.
 >
-> Definimos el evento $X = $ "extrae dos piezas buenas", teniendo en cuenta que es con reposición y sabiendo la cantidad de piezas buenas en cada caja, aplicamos el teorema de bayes, donde extraer dos piezas buenas es el producto de la relacion de pieza buena con pieza totales dos veces por la chance de elegir respectiva caja.
+> Definimos el evento $X =$ "extrae dos piezas buenas", teniendo en cuenta que es con reposición y sabiendo la cantidad de piezas buenas en cada caja, aplicamos el teorema de bayes, donde extraer dos piezas buenas es el producto de la relacion de pieza buena con pieza totales dos veces por la chance de elegir respectiva caja.
 >
 > $$P(A|X) = \frac{P(X|A) * P(A)}{P(X|A) * P(A) + P(X|B) * P(B) + P(X|C) * P(C)} = \frac{1 * \frac{1}{4}}{1 * \frac{1}{4} + (\frac{15}{20})^2 * \frac{1}{4} + (\frac{10}{20})^2 * \frac{1}{2}} = 0.4848$$
 
