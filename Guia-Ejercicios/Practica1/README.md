@@ -595,10 +595,22 @@ Considérese un sistema de componentes conectados como lo muestra la Figura 1. L
 ### 21) $n$ sucesos independientes
 Sean $S_1 , . . . , S_n$ sucesos independientes tales que $P(S_i) = p_i$.
 
-(a) Expresar en función de los pi la probabilidad de que de los Si ocurra:
+(a) Expresar en función de los $p_i$ la probabilidad de que de los $S_i$ ocurra:
 
 - ninguno.
+
+    > $P((\bigcup_{i=1}^n S_i)^c) = P(\bigcap_{i=1}^n S_i^c) = \prod_{i = 1}^n P(S_i^c) = \prod_{i = 1}^n (1 - p_i)$
+
 - al menos uno.
+
+    > Que al menos uno de los sucesos $S_i$ ocurra es el complemento de la situación en el que **ningún** suceso ocurra.
+    >
+    > $P(((\bigcup_{i=1}^n S_i)^c)^c) = 1 - P(\bigcap_{i=1}^n S_i^c) = 1 - \prod_{i = 1}^n P(S_i^c) = 1 - \prod_{i = 1}^n (1 - p_i)$  
+
 - exactamente uno.
 
+    > Preguntar!!
+
 (b) Para $k = 0, . . . , n$, hallar la probabilidad de que ocurran exactamente $k$ de los sucesos $S_i$ en el caso en que $P(S_i) = p$ para todo $i$.
+
+> 
