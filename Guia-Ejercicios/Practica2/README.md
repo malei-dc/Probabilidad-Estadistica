@@ -40,3 +40,21 @@ De un lote que contiene $15$ artı́culos, de los cuales $4$ son defectuosos, se
 (d) Estimar mediante una simulación las probabilidades calculadas en el item a).
 
 > En el archivo [Practica2.ipynb](https://github.com/malei-dc/PyE/tree/main/Guia-Ejercicios/Practica2/Practica2.ipynb)
+
+### 2) Función de distribución
+Sea $X$ una variable aleatoria con función de distribución: 
+
+![](https://github.com/malei-dc/PyE/tree/main/Guia-Ejercicios/Practica2/imgs/ej2Funcion.png)
+
+(a) Hallar la función de probabilidad puntual de $X$.
+
+(b) Calcular de dos maneras: utilizando la función de distribución y utilizando la función de probabilidad puntual, las siguientes probabilidades:
+
+- $P (3 < X \leq 6)$
+- $P (3 \leq X \leq 6)$
+- $P (X \geq 4)$
+- $P (X \geq 6)$
+
+(c) Utilizando el comando sample, generar 5 realizaciones de esta variable aleatoria en R
+
+(d) Mediante una simulación, estimar las probabilidades del item b).
