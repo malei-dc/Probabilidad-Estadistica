@@ -46,7 +46,7 @@ De un lote que contiene $15$ artı́culos, de los cuales $4$ son defectuosos, se
 
 Sea $X$ una variable aleatoria con función de distribución:
 
-![](https://github.com/malei-dc/PyE/tree/main/Guia-Ejercicios/Practica2/imgs/ej2Funcion.png)
+![](https://github.com/malei-dc/PyE/blob/main/Guia-Ejercicios/Practica2/imgs/ej2Funcion.png)
 
 (a) Hallar la función de probabilidad puntual de $X$.
 
@@ -57,7 +57,7 @@ Sea $X$ una variable aleatoria con función de distribución:
 >
 > Definimos $P_X$ como la función puntual:
 >
-> ![Función puntual](https://github.com/malei-dc/PyE/tree/main/Guia-Ejercicios/Practica2/imgs/ej2FuncionPuntual.png)
+> ![](https://github.com/malei-dc/PyE/blob/main/Guia-Ejercicios/Practica2/imgs/ej2FuncionPuntual.png)
 
 (b) Calcular de dos maneras: utilizando la función de distribución y utilizando la función de probabilidad puntual, las siguientes probabilidades:
 
@@ -68,17 +68,17 @@ Sea $X$ una variable aleatoria con función de distribución:
 
 > Usando la función de distribución:
 >
-    > - $P(3 < X \leq 6) = F_X(6) - F_X(3) = 0.6 - 0.4 = 0.2$
-    > - $P(3 \leq X \leq 6) = F_X(6) - F_X(3^-) = 0.6 - 0.3 = 0.3$
-    > - $P(X \geq 4) = 1 - P (4 < X) = 1 - F_X(4^-) = 1 - 0.4 = 0.6$
-    > - $P(X \geq 6) = 1 - P(6 < X) = 1 - F_X(6^-) = 1 - 0.4 $
+> - $P(3 < X \leq 6) = F_X(6) - F_X(3) = 0.6 - 0.4 = 0.2$
+> - $P(3 \leq X \leq 6) = F_X(6) - F_X(3^-) = 0.6 - 0.3 = 0.3$
+> - $P(X \geq 4) = 1 - P (4 < X) = 1 - F_X(4^-) = 1 - 0.4 = 0.6$
+> - $P(X \geq 6) = 1 - P(6 < X) = 1 - F_X(6^-) = 1 - 0.4 $
 >
 > Usando la función puntual:
 >
-    > - $P(3 < X \leq 6) = P_X(6) = 0.2$
-    > - $P(3 \leq X \leq 6) = P_X(3) + P_X(6) = 0.1 + 0.2 = 0.3$
-    > - $P(X \geq 4) = P_X(6) + P_X(12) = 0.2 + 0.4$
-    > - $P(X \geq 6) = P_X(6) + P_X(12) = 0.2 + 0.4$
+> - $P(3 < X \leq 6) = P_X(6) = 0.2$
+> - $P(3 \leq X \leq 6) = P_X(3) + P_X(6) = 0.1 + 0.2 = 0.3$
+> - $P(X \geq 4) = P_X(6) + P_X(12) = 0.2 + 0.4$
+> - $P(X \geq 6) = P_X(6) + P_X(12) = 0.2 + 0.4$
 
 (c) Utilizando el comando sample, generar 5 realizaciones de esta variable aleatoria en R
 
@@ -114,5 +114,5 @@ Calcular la esperanza de la variable aleatoria definida en el ejercicio 1 utiliz
 
 Definir una función en R que, dados dos vectores $x = (x_1 , . . . , x_n )$ y $p = (p_1 , . . . , p_n )$ calcule la esperanza de la variable aleatoria discreta que toma valores $x_1 , . . . , x_n$ con probabilidades $p_1 , . . . , p_n$ respectivamente. Probar que funciona para la variable aleatoria $X$ del ejercicio 1.
 
-> Simulación en el archivo [Practica2.ipynb](https://github.com/malei-dc/PyE/tree/main/Guia-Ejercicios/Practica2/Practica2.ipynb)
+> En el archivo [Practica2.ipynb](https://github.com/malei-dc/PyE/tree/main/Guia-Ejercicios/Practica2/Practica2.ipynb)
 
