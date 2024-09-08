@@ -1,6 +1,6 @@
 # Práctica 2
 
-## Variables aleatorias discretas
+## Variables aleatorias discretas, esperanza y varianza
 
 ### 1) Lote de artículos
 
@@ -116,3 +116,83 @@ Definir una función en R que, dados dos vectores $x = (x_1 , . . . , x_n )$ y $
 
 > En el archivo [Practica2.ipynb](https://github.com/malei-dc/PyE/tree/main/Guia-Ejercicios/Practica2/Practica2.ipynb)
 
+### 7) Función que calcula la varianza
+
+Definir una función en R que, dados dos vectores $x = (x_1 , . . . , x_n )$ y $p = (p_1 , . . . , p_n )$ calcule la varianza de la variable aleatoria discreta que toma valores $x_1 , . . . , x_n$ con probabilidades $p_1 , . . . , p_n$ respectivamente. Probar que funciona para la variable aleatoria $X$ del ejercicio 1.
+
+> En el archivo [Practica2.ipynb](https://github.com/malei-dc/PyE/tree/main/Guia-Ejercicios/Practica2/Practica2.ipynb)
+>
+> Teniendo en cuenta que la $Var(X) = E(X^2) - (E(X)^2)$, lo calculamos para los valores de 
+> $x = [0, 1, 2, 3]$ con la probabilidades asociadas de $p = [0.3943, 0.4302, 0.1563, 0.0192]$ 
+>
+> $$Var(X) = [0^2 * 0.3943 + 1^2 * 0.4302 + 2² * 0.1563 + 3² * 0.0192] - 0.8004^2 = 0.5875$$ 
+
+## Distribuciones
+
+### 8) Distribución de Bernoulli
+
+Sea $X$ una v.a. con distribución Bernoulli de parámetro $p$.
+
+(a) Calcular $E(X^k)$ para $k \in N$
+
+> Que sea una v.a. con distribución Bernoulli quiere decir que toma solo dos valores (éxito y fracaso) con $p$ la probabilidad de éxito y $1-p$ la probabilidad de fracaso.
+>
+> $$E(X^k) = \sum_{x \in R_X} x^k * p_X(x) = 0^k * (1-p) + 1^k * p = p$$
+ 
+(b) Mostrar que $V(X) = p(1 − p)$.
+
+> Por definición: 
+>
+>$$V(X) = \sum_{x \in R_X} (x - E(X))² * p_X(x) =$$ 
+>
+>$$= (0 - p)² * (1-p) + (1-p)² * p =$$
+>
+>$$= p² * (1-p) + (1-p)² * p =$$
+>
+>$$= p * (1-p) * [p+1-p] = p * (1-p) \square$$ 
+>
+> Por fórmula: 
+>
+>$$Var(X) = E(X²) - E(X)^2 = p - p² = p * (1 - p)
+
+### 9) Sistema de consulta
+
+El 70% de las consultas de un sistema interactivo de computación requiere de acceso a bases de datos. Un sistema recibe 25 consultas independientes unas de otras,
+
+(a) ¿cuál es la probabilidad de que:
+
+1. exactamente 20 consultas requieran acceso a una base de datos?
+
+    > Sabemos que el experimento $X$: "requiere de acceso a bases de datos" es binomial (require o no requiere). Notación: $X \sim Bi(25, 0.7)$ y para calcular la probabilidad puntual de 20 es: 
+    >
+    >$$P(X = 20) = p_X(20) = \binom{25}{20} * 0.7 ^{20} * (1-0.7)^5 = 0.1030$$
+    >
+    >$$P(X = 21) = p_X(21) = \binom{25}{21} * 0.7 ^{21} * (1-0.7)^4 = 0.0572$$
+    >
+    >$$P(X = 22) = p_X(22) = \binom{25}{22} * 0.7 ^{22} * (1-0.7)^3 = 0.0242$$
+    >
+    >$$P(X = 23) = p_X(23) = \binom{25}{23} * 0.7 ^{23} * (1-0.7)^2 = 0.0073$$
+    >
+    >$$P(X = 24) = p_X(24) = \binom{25}{24} * 0.7 ^{24} * (1-0.7) = 0.0014$$
+
+2. el número de consultas que requieran acceso a una base de datos esté entre 20 y 24 inclusive? 
+
+    >$$P(20 \leq X \leq 24) = \sum_{k=20}^{24} \binom{25}{k} * 0.7^{k} * 0.3^{25-k} =$$
+    >
+    >$$= 0.1030 + 0.0572 + 0.0242 + 0.0073 + 0.0014 = 0.1931$$
+
+(b) Calcular el valor esperado y la varianza del número de consultas que requieren acceso a una base de datos.
+
+> $E(X) = n * p = 25 * 0.7 = 17.5$
+>
+> $V(X) = n * p * (1-p) = 25 * 0.7 * 0.3 = 5.25$
+
+### 10) Dos dados, uno desequilibrado
+
+Se tienen dos dados, uno equilibrado y el otro cargado en el cual los números 1 y 2 tienen probabilidad 1/3 y el resto 1/12. Se elige un dado al azar y se lo arroja tres veces (independientemente). Sea X el número de veces que sale 1 ó 2.
+
+(a) ¿Cuál es la distribución de X condicional a que se eligió el dado cargado?
+
+> La distribución a que se eligió el dado cargados es un $X \sim Bi(3, \frac{2}{3})$ ya que se lanza 3 veces y la probabilidad en que salga 1 o 2 es la suma de $\frac{1}{3} + \frac{1}{3}$
+
+(b) Hallar una expresión general para $p_X(k)$.
