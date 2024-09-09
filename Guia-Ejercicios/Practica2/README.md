@@ -153,7 +153,7 @@ Sea $X$ una v.a. con distribución Bernoulli de parámetro $p$.
 >
 > Por fórmula: 
 >
->$$Var(X) = E(X²) - E(X)^2 = p - p² = p * (1 - p)
+>$$Var(X) = E(X²) - E(X)^2 = p - p² = p * (1 - p)$$
 
 ### 9) Sistema de consulta
 
@@ -196,3 +196,72 @@ Se tienen dos dados, uno equilibrado y el otro cargado en el cual los números 1
 > La distribución a que se eligió el dado cargados es un $X \sim Bi(3, \frac{2}{3})$ ya que se lanza 3 veces y la probabilidad en que salga 1 o 2 es la suma de $\frac{1}{3} + \frac{1}{3}$
 
 (b) Hallar una expresión general para $p_X(k)$.
+
+> Elegimos un dado al azar, así que hay $\frac{1}{2}$ de probabilidad de elegir cada uno, y son casos disjuntos.
+>
+> Sea $D_c$: "salga 1 o 2 con el dado cargado" tenemos una probabilidad de $\frac{2}{3}$
+>
+> Sea $D_n$: "salga 1 o 2 con el dado no cargado" tenemos una probabilidad de $\frac{1}{3}$
+>
+> Usando el teorema de la probabilida total:
+>
+> $$p_X(k) = P(X=k|D_c) * P(D_c) + P(X=k|D_n) * P(D_n)$$
+>
+> $$p_X(k) = [\binom{3}{k} (\frac{2}{3})^k (\frac{1}{3})^{3-k} * \frac{1}{2}] + [\binom{3}{k} (\frac{1}{3})^k (\frac{2}{3})^{3-k} * \frac{1}{2}] =$$
+>
+> $$= \binom{3}{k} * \frac{1}{2} * [(\frac{2}{3})^k (\frac{1}{3})^{3-k} + (\frac{1}{3})^k (\frac{2}{3})^{3-k}] $$
+
+### 11) Residuos en Río Reconquista
+
+Para verificar si se cumplen las normas establecidas para arrojar residuos al rı́o Reconquista, un inspector visita al azar 10 de las 50 industrias establecidas a orillas de dicho rı́o.
+
+(a) Si en realidad 35 industrias no cumplen con alguna de las normas, ¿cuál es la distribución del número de industrias visitadas que están en infracción? Calcular la probabilidad de que 6 de las industrias visitadas estén en infracción.
+
+> Tenemos $N$ = 50 fábricas, de los cuales $D$ = 35 cumplen alguna de las normas, y se visita al azar $n$ = 10. Entonces sea $X$ tiene distribución hipergeometrica $X \sim H(10, 50, 35)$
+>
+> $$p_X(x) = \frac{\binom{D}{x}\binom{N-D}{n-x}}{\binom{N}{n}}$$
+>
+> $$p_X(6) = \frac{\binom{35}{6}\binom{50-35}{10-6}}{\binom{50}{10}} = \frac{\binom{35}{6}\binom{15}{4}}{\binom{50}{10}} = 0.2156$$
+
+(b) Si hay 500 industrias de las cuales 350 están en infracción, aproximar la distribución de **(a)** por una más simple. Calcular nuevamente la probabilidad de que 6 de las industrias visitadas estén en infracción.
+
+> Puedo aproximar sabiendo que de 500 industrias 350 andan en infracción y elijo al azar 10, sea $Y$ la distribución aproximada de $X$, defino $X \sim Y \sim Bi(10, 0.7)$ ya que $p = \frac{350}{500} = 0.7$ y $n = 10$.
+>
+> $$p_Y(y) = \binom{n}{y} * p^y * (1-y)^{n-y}$$
+>
+> $$p_Y(6) = \binom{10}{6} * 0.7^6 * (1-0.7)^{10-6} = 0.2001$$
+
+(c) Sea $X$ el número de fábricas que están en infracción entre las 10 visitadas. Calcular $E(X)$ y $V(X)$ para las distribuciones exacta **(a)** y aproximada **(b)**.
+
+> En en punto **(a)** con $X \sim H(10, 50, 35)$
+>
+>  $$E(X) = n \frac{D}{N} \Rightarrow E(X) = 10 * \frac{35}{50} = 7$$
+>
+>  $$V(X) = (\frac{N-n}{N-1})n \frac{D}{N}(1-\frac{D}{N}) \Rightarrow V(X) = (\frac{50-10}{50-1}) * 7 * (1-\frac{35}{50}) = 1.7142$$
+
+> En en punto **(b)** con $Y \sim Bi(10, 0.7)$
+>
+> $$E(Y) = np \Rightarrow E(Y) = 10 * 0.7 = 7$$
+>
+> $$V(Y) = np(1-p) \Rightarrow V(Y) = 10 * 0.7 * 0.3 = 2.1$$
+
+### 12) Ruleta
+Una rueda de ruleta está dividida en 38 secciones, de las cuales 18 son rojas, 18 son negras y las 2 restantes son verdes. Sea $X$ el número necesario de juegos hasta obtener una sección verde en jugadas independientes.
+
+(a) ¿Cuál es la probabilidad de que sean necesarias al menos 4 jugadas?
+
+> Se repite hasta que sea verde, entonces es una distribución geométrica $X \sim G(p)$ con $p = \frac{2}{38} = 0.0526$
+>
+> $P(x \geq 4) = 1 - F_X(4^-) = 1 - F_X(3) = 1 - [1 - (1-0.0526)^3] = 0.8503$
+
+(b) Hallar la función de distribución acumulada de la v.a. $X$.
+
+> ![](https://github.com/malei-dc/PyE/blob/main/Guia-Ejercicios/Practica2/imgs/ej12eAcumulada.png)
+
+(c) Si fueron necesarias 7 o más jugadas, ¿cuál es la probabilidad de que se necesiten al menos 10 jugadas? Comparar con **(a)**.
+
+
+
+(d) ¿Cuál es la probabilidad de que sea necesario un número impar de jugadas?
+
+(e) Hallar $E(X)$ y $V(X)$ .
