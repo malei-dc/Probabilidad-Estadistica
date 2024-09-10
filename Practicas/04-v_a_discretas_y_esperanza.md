@@ -8,7 +8,33 @@ $X =$ "ganancia obtenida".
 
 (a) ¿Cuál es la probabilidad putual de $X$ , la función de distribución acumulada de $X$ y su gráfico?
 
+> El rango de $X$ es $R_X = \{ -20000, -10000, 0, 10000, 20000\}$
+>
+> Probabilidades puntuales de $X$:
+>
+> $$p_X(-20000)= \frac{\binom{3}{2}}{\binom{11}{2}} = \frac{3}{55} = 0.0545$$
+>
+> $$p_X(-10000)= \frac{\binom{3}{1} * \binom{3}{1}}{\binom{11}{2}} = \frac{9}{55} = 0.1636$$
+>
+> $$p_X(0)= \frac{\binom{3}{2}}{\binom{11}{2}} + 2 * \frac{\binom{5}{1} * \binom{3}{1}}{\binom{11}{2}} = \frac{3}{55} + \frac{15}{55}= 0.3272$$
+>
+> $$p_X(10000)= \frac{\binom{5}{1} * \binom{3}{1}}{\binom{11}{2}} = \frac{15}{55} = 0.2727$$
+>
+> $$p_X(20000)= \frac{\binom{5}{2}}{\binom{11}{2}} = \frac{10}{55} = 0.1818$$
+
+> Función distribución acumulada:
+>
+> - $F_X(-20000) =  0.0545$
+> - $F_X(-10000) =  0.2181$
+> - $F_X(0) = 0.5453$
+> - $F_X(10000) = 0.818$
+> - $F_X(20000) =  1$
+
+![](image.png)
+
 (b) ¿Cuál es la probabilidad de tener ganancia en el juego?
+
+> $P(X > 0) = 1 - F_X(X \leq 0) = 1 - F_X(0) = 1-0.5453 = 0.4547$
 
 ## Ejercicio 2
 La función de distribución de una v.a X que toma los valores {−1, 1, 2, 3} es ([ver enunciado](https://github.com/malei-dc/PyE/blob/main/Practicas/04-v_a_discretas_y_esperanza.pdf))
