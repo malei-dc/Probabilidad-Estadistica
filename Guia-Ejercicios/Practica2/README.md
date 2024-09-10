@@ -260,8 +260,112 @@ Una rueda de ruleta está dividida en 38 secciones, de las cuales 18 son rojas, 
 
 (c) Si fueron necesarias 7 o más jugadas, ¿cuál es la probabilidad de que se necesiten al menos 10 jugadas? Comparar con **(a)**.
 
-
+> La distribución geométrica tiene la propiedad de falta de memoria ([Explicación](https://github.com/malei-dc/PyE/blob/main/Apuntes/OlvidoGeometrica.pdf))
+>
+> Teniendo en cuenta esta propiedad y la función distribución acumulada de la geométrica, calculamos: 
+>
+> $$P(X \geq 10 | X \geq 7) = P(X > 9 | X > 6) = P(X > 3) = P(X \geq 4) = 1 - P(X \leq 3) = 1 - F_X(3) = 0.8503$$
+>
+> Ya calculado en el punto **(a)**
 
 (d) ¿Cuál es la probabilidad de que sea necesario un número impar de jugadas?
 
+> Sea $I = \{ n \in N | impar \} \subset X$
+>
+> Sabemos entonces que $P(I) = p_X(1) + p_X(2) + \dots + p_X(2k+1)$, calculamos
+>
+> $$P(I) = \sum_{i = 0}^{\infty} p * (1-p)^{2i} = \sum_{i = 0}^{\infty} 0.0526 * (1-0.0526)^{2i} = 0.0526 * \sum_{i = 0}^{\infty} (0.8975)^{i} =$$
+>
+> Como $\sum_{i = 0}^{\infty} (0.8975)^{i}$ es una serie geométrica: $\sum_{i = 0}^{\infty} r^{i}$ para $|r| < 1$ se puede aplicar la fórmula de $\sum_{i = 0}^{\infty} r^{i} = \frac{1}{1-r}$, lo cual queda:
+>
+> $$= 0.0526 * \sum_{i = 0}^{\infty} (0.8975)^{i} = 0.0526 * \frac{1}{1-0.8975} \approx 0.5131$$
+
 (e) Hallar $E(X)$ y $V(X)$ .
+
+> $$E(X) = \frac{1}{p} = \frac{1}{0.0526} = 19$$
+>
+> $$V(X) = \frac{1-p}{p²} = \frac{1-0.0526}{0.0526²} = 342$$
+
+### 13) Ruleta parte 2
+
+Si en el ejercicio anterior se define $Y$: "número de juegos hasta obtener exactamente tres secciones verdes",
+
+(a) ¿qué distribución tiene la v.a. $Y$ ?
+
+> En este caso $Y \sim BN(r, p)$ donde $r$ indica obtener hasta la r-sima sección verde (en este caso 3) y $p$ la probabilidad (en este caso $\frac{2}{38}$). 
+
+(b) ¿cuál es la probabilidad de que se requieran exactamente 5 jugadas?
+
+> Teniendo que $Y \sim BN(3, \frac{2}{38})$ queremos calcular la probabilidad puntual en el valor 5 dada la fórmula:
+>
+> $$P(X = k) = \binom{k-1}{r-1} p^r (1-p)^{k-r}$$
+>
+> Reemplazando obtenemos:
+>
+> $$P(X = 5) = \binom{5-1}{3-1} (\frac{2}{38})^3 (1-\frac{2}{38})^{5-3} = \binom{4}{2} * 0.0526^3 * 0.9473² = 0.0007851$$
+
+(c) hallar $E(Y)$ y $V(Y)$ .
+
+> $$E(Y) = \frac{r}{p} = \frac{3}{\frac{2}{38}}=57$$
+>
+> $$V(Y) = \frac{r(1-p)}{p²} = \frac{3 * (1-\frac{2}{38})}{(\frac{2}{38})²} = 1026$$
+
+### 14) Motor de búsqueda
+
+Con el fin de encontrar una palabra clave, un motor de búsqueda de internet explora una secuencia de sitios de la WEB en orden aleatorio. Al iniciar la búsqueda, el motor elige, al azar y con igual probabilidad, una entre dos secuencias posibles de sitios. Se sabe que el 10% de los sitios de la primera secuencia contienen esta palabra clave, mientras que sólo el 5% de los sitios de la segunda contienen dicha palabra.
+
+(a) Si la búsqueda termina ni bien se encuentra un sitio que contenga la palabra clave, ¿cuál es la probabilidad de que más de 5 sitios deban ser explorados?
+
+> Tenemos dos secuencias que se eligen al azar con igual probabilidad. $S_1, S_2$ con $P(S_i) = 0.5$. 
+>
+> Sea $X$: "encuentra un sitio que contenga la palabra clave"
+>
+> Tenemos que $X \sim G(p)$ en donde $p$ depende de la secuencia que andamos buscando.
+>
+> - $X|S_1 \sim G(0.1)$
+> - $X|S_2 \sim G(0.05)$
+>
+> Queremos encontrar $P(X > 5)$, usando el teorema de la probabilidad total tenemos:
+>
+> $$ P(X > 5) = P(S_1) * P(X > 5 | S_1) + P(S_2) * P(X > 5 | S_2) =$$
+>
+> Para $P(X > k) = 1 - F_X(k)$ es decir le resto el valor acumulado hasta $k$
+> 
+> $$= 0.5 * [1-(1-(1-0.1)⁵)] + 0.5 * [1-(1-(1-0.05)⁵)] = 0.295245 + 0.3868 = 0.6821$$
+
+(b) Si se sabe que el motor de búsqueda encontró la palabra clave en la sexta visita ¿cuál es la probabilidad de que la haya encontrado en la segunda secuencia?
+
+> $$P(S_2|X=6) = \frac{S_2 \cap (X=6)}{P(X=6)} = \frac{P(X = 6 | S_2) * P(S_2)}{P(S_1) * P(X = 6 | S_1) + P(S_2) * P(X = 6 | S_2)} =$$
+>
+> $$=\frac{p_{X_2}(6) * P(S_2)}{P(S_1) * p_{X_1}(6) + P(S_2) * p_{X_2}(6)} = \frac{[(1-0.05)^{6-1} * 0.05] * 0.5}{0.5 * [(1-0.1)^{6-1} * 0.1] + 0.5 * [(1-0.05)^{6-1} * 0.05]} = \frac{0.0193445}{0.0295245+0.0193445} = 0.3958$$ 
+
+(c) Si la búsqueda termina cuando se encuentran 2 sitios que contenga la palabra clave ¿cuál es la probabilidad de que deban explorarse exactamente 10 sitios?
+
+> En este caso es una distribucion de binomial negativa $X \sim BN(r, p)$ donde $r = 2$ y $p$ depende de la secuencia que se esté buscando.
+>
+> - $X_1 \sim BN(2, 0.1)$
+> - $X_2 \sim BN(2, 0.05)$
+>
+> Usando el teorema de la probabilidad total y la función de probabilidad puntual de lla binomial negativa:
+>
+> $$P(X = k) = P(X_1 = k) * P(S_1) + P(X_2 = k) * P(S_2) = p_{X_1} (k) * P(S_1) + p_{X_2}(k) * P(S_2)$$
+>
+> Reemplazando nos queda:
+>
+> $$P(X = 10) = p_{X_1}(10) * P(S_1) + p_{X_2}(10) * P(S_2) =$$
+>
+> $$= [\binom{10-1}{2-1} 0.1² * (1-0.1)^8] * 0.5 + [\binom{10-1}{2-1} 0.05² * (1-0.05)^8] * 0.5 = 0.0268$$
+
+### 15) Minorista
+
+Un minorista ha verificado que la demanda semanal de cajones de cierto producto es una v.a. con distribución de Poisson de parámetro $\lambda = 2$. Completa su existencia los lunes por la mañana de manera de tener 4 cajones al principio de la semana. Al efectuar un análisis de la actividad de su negocio, se le plantean las siguientes preguntas:
+
+(a) ¿Cuál es la probabilidad de vender todo su stock durante la semana?
+
+> $$
+
+(b) ¿Cuál es la probabilidad de que sea incapaz de cumplir con un pedido por lo menos?
+
+(c) ¿Cuál es la distribución del número de cajones vendidos en una semana?
+
+(d) ¿Con cuántos cajones deberı́a iniciar la semana a fin de que la probabilidad de cumplir con todos sus pedidos fuese mayor o igual que 0.99?
