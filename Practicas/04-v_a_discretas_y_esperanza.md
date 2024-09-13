@@ -30,7 +30,7 @@ $X =$ "ganancia obtenida".
 > - $F_X(10000) = 0.818$
 > - $F_X(20000) =  1$
 
-![](image.png)
+![](04-ej1Acumulada.png)
 
 (b) ¿Cuál es la probabilidad de tener ganancia en el juego?
 
@@ -41,11 +41,44 @@ La función de distribución de una v.a X que toma los valores {−1, 1, 2, 3} e
 
 (a) Hallar la función de probabilidad puntual.
 
+> $$p_X(-1) = F_X(-1) - F_X(-1^-)= 0.4 - 0 = 0.4$$
+>
+> $$p_X(1) = F_X(1) - F_X(-1)= 0.5 - 0.4 = 0.1$$
+>
+> $$p_X(2) = F_X(2) - F_X(1)= 0.8 - 0.5 = 0.3$$
+>
+> $$p_X(3) = F_X(3) - F_X(2)= 0.1 - 0.8 = 0.2$$
+
 (b) Calcular: $P(0,5 < X < 2,3)$ y $P(X ≤ 2,7|X ≥ 0)$
 
+> $P(0,5 < X < 2,3) = P(1 \leq X \leq 2) = p_X(1) + p_X(2) = 0.1 + 0.3 = 0.4$
+>
+> $P(X \leq 2,7|X \geq 0) = \frac{P(X \leq 2,7 \cap X \geq 0)}{P(X \geq 0)} = \frac{P(0 \leq X \leq 2,7)}{P(X \geq 0)} = \frac{P(1 \leq X \leq 2)}{1 - P(X < 0)} = \frac{p_X(1) + p_X(2)}{1 - p_X(-1)} = \frac{0.4}{1- 0.4} = 0.6666$
+
 ## Ejercicio 3
-En un depósito hay 15 discos externos de igual memoria. Se sabe que hay tres fallados pero no se sabe cuáles. Una escuela compra dos al azar. Calcular la función de probabilidad puntual y de distribución acumulada
-asociadas a adquirir discos defectusos.
+En un depósito hay 15 discos externos de igual memoria. Se sabe que hay tres fallados pero no se sabe cuáles. Una escuela compra dos al azar. Calcular la función de probabilidad puntual y de distribución acumulada asociadas a adquirir discos defectusos.
+
+> Sea $X$: "adquirir discos defectusos", como la escuela compra 2, sabemos que el $R_X = 0, 1, 2$.
+>
+> Las funciones puntuales son:
+>
+> $$p_X(0) = \frac{\binom{3}{0} * \binom{12}{2}}{\binom{15}{2}} = \frac{1 * 66}{105} = 0.6285$$
+> 
+> $$p_X(1) = \frac{\binom{3}{1} * \binom{12}{1}}{\binom{15}{2}} = \frac{3 * 12}{105} = 0.3428$$
+>
+> $$p_X(2) = \frac{\binom{3}{2} * \binom{12}{0}}{\binom{15}{2}} = \frac{3 * 1}{105} = 0.0287$$
+>
+> La función distribución acumulada es:
+>
+> - Si $x < 0 \rightarrow F_X(x) = P(X \leq x) = 0$
+> - Si $x = 0 \rightarrow F_X(0) = P(X \leq 0) = p_X(0) = 0.6285$
+> - Si $0 < x < 1 \rightarrow F_X(x) = P(X \leq x) = p_X(0) = 0.6285$
+> - Si $x = 1 \rightarrow F_X(1) = P(X \leq 1) = p_X(0) + p_X(1) = 0.6285 + 0.3428 = 0.9713$
+> - Si $1 < x < 2 \rightarrow F_X(x) = P(X \leq x) = p_X(0) + p_X(1) = 0.6285 + 0.3428 = 0.9713$ 
+> - Si $x = 2 \rightarrow F_X(2) = P(X \leq 2) = p_X(0) + p_X(1) + p_X(2) = 0.6285 + 0.3428 + 0.0287 = 1$
+> - Si $x > 2 \rightarrow F_X(x) = P(X \leq 2) = p_X(0) + p_X(1) + p_X(2) = 0.6285 + 0.3428 + 0.0287 = 1$
+
+> DATO: más adelante veremos que esta variable aleatoria es una hipergeométrica.
 
 ## Ejercicio 4
 La v.a. X está distribuida según la siguiente probabilidad puntual
@@ -55,3 +88,9 @@ La v.a. X está distribuida según la siguiente probabilidad puntual
 | $P(X=x)$ | 0.3 | 0.1 | 0.25 | 0.25 | 0.1 |
 
 Calcular la funcion de probabilidad acumulada de $X$ y $E(X)$. Hallar la $E(Y)$ y $E(Z)$ donde $Y = 3X − 1$ y $Z = \frac{1}{X}$
+
+> $$E(X) = \sum_{x \in R_X} x * p_X(x) = 1 * 0.3 + 2 * 0.1 + 3 * 0.25 + 4 * 0.25 + 5 * 0.1 = 2.75$$
+>
+> $$E(Y) = E(3X - 1) = \sum_{x \in R_X} (3x-1) * p_X(x) = \sum_{x \in R_X} (3x * p_X(x) - 1 * p_X(x)) = \sum_{x \in R_X}3x * p_X (x) - \sum_{x \in R_X} 1 * p_X(x) = 3 * E(X) - 1 * 1 = 7.25$$
+>
+> $$E(Z) = E(\frac{1}{X}) = \sum_{x \in R_X} \frac{1}{x} * p_X(x) = \frac{1}{1} * 0.3 + \frac{1}{2} * 0.1 + \frac{1}{3} * 0.25 + \frac{1}{4} * 0.25 + \frac{1}{5} * 0.1 = 0.5158$$
