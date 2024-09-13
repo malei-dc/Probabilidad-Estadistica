@@ -91,6 +91,8 @@ Calcular la funcion de probabilidad acumulada de $X$ y $E(X)$. Hallar la $E(Y)$ 
 
 > $$E(X) = \sum_{x \in R_X} x * p_X(x) = 1 * 0.3 + 2 * 0.1 + 3 * 0.25 + 4 * 0.25 + 5 * 0.1 = 2.75$$
 >
-> $$E(Y) = E(3X - 1) = \sum_{x \in R_X} (3x-1) * p_X(x) = \sum_{x \in R_X} (3x * p_X(x) - 1 * p_X(x)) = \sum_{x \in R_X}3x * p_X (x) - \sum_{x \in R_X} 1 * p_X(x) = 3 * E(X) - 1 * 1 = 7.25$$
+> $$E(Y) = E(3X - 1) = \sum_{x \in R_X} (3x-1) * p_X(x) = \sum_{x \in R_X} (3x * p_X(x) - 1 * p_X(x)) =$$
+>
+> $$\sum_{x \in R_X}3x * p_X (x) - \sum_{x \in R_X} 1 * p_X(x) = 3 * E(X) - 1 * 1 = 7.25$$
 >
 > $$E(Z) = E(\frac{1}{X}) = \sum_{x \in R_X} \frac{1}{x} * p_X(x) = \frac{1}{1} * 0.3 + \frac{1}{2} * 0.1 + \frac{1}{3} * 0.25 + \frac{1}{4} * 0.25 + \frac{1}{5} * 0.1 = 0.5158$$
