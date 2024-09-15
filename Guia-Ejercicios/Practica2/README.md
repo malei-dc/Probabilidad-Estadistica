@@ -362,10 +362,54 @@ Un minorista ha verificado que la demanda semanal de cajones de cierto producto 
 
 (a) ¿Cuál es la probabilidad de vender todo su stock durante la semana?
 
-> $$
+> $$P(X = k)= \frac{e^{-\lambda}\lambda^k}{k!} \Rightarrow P(X = 4)= \frac{e^{-2}2^4}{4!} = 0.0902$$
 
 (b) ¿Cuál es la probabilidad de que sea incapaz de cumplir con un pedido por lo menos?
 
+> $$P(X \geq 5) = 1 - P(X < 5) = 1 - [P(X=0)+P(X=1)+P(X=2)+P(X=3)+P(X=4)]=$$
+>
+> $$= 1-[e^{-2} * (\frac{2^0}{0!}+\frac{2^1}{1!}+\frac{2^2}{2!}+\frac{2^3}{3!}+\frac{2^4}{4!})] = 1-[e^{-2} * 7] = 0.0526$$
+
 (c) ¿Cuál es la distribución del número de cajones vendidos en una semana?
 
+>El número de cajones vendidos en una semana sigue una distribución de Poisson. Esto es porque, según la descripción del problema, la demanda semanal de cajones de cierto producto se modela como una variable aleatoria con distribución de Poisson de parámetro $\lambda = 2$. La distribución es $X \sim P(2)$
+
 (d) ¿Con cuántos cajones deberı́a iniciar la semana a fin de que la probabilidad de cumplir con todos sus pedidos fuese mayor o igual que 0.99?
+
+> Sabemos por el item anterior que $P(X \leq 4) \approx 0.9474$
+>
+> Calculamos: 
+>
+> $$P(X=5) = \frac{e^{-2}2^5}{5!} = 0.0360$$
+>
+> $$P(X=6) = \frac{e^{-2}2^6}{6!} = 0.0120$$
+>
+> $$P(X \leq 6) = P(X \leq 4) + P(X=5) + P(X=6) = 0.9474 + 0.0360 + 0.0120 = 0.9954 > 0.99$$
+>
+> Para que la probabilidada de cumplir con todos sus pedidos sea mayor o igual que 0.99 tiene que iniciar la semana con 6 cajones
+
+### 16) Bibliotecario
+
+Un bibliotecario ubica 1000 libros en un cierto dı́a. Si la probabilidad de que un libro cualquiera sea mal ubicado es 0.001 y los libros se ubican en forma independiente, ¿cuál es la distribución aproximada del número de libros mal ubicados en ese dı́a? 
+
+> La distribución es de $X \sim Bi(1000,0.001)$. Pero se puede aproximar con una distribución Poisson con parametro $\lambda = n * p = 1 \Rightarrow Y \sim P(1)$
+
+> La distribución binomial $X \sim Bi(n,p)$ puede aproximarse por una distribución de Poisson con parámetro $\lambda = n⋅p$ cuando se cumplen las siguientes condiciones:
+>
+> 1. $n$ es grande: El número de ensayos $n$ debe ser grande (en este caso, $n=1000$).
+> 2. $p$ es pequeño: La probabilidad de éxito $p$ debe ser pequeña (en este caso, $p=0.001$).
+> 3. $np$ es de tamaño moderado: El producto $n⋅p=λ$ debe ser de tamaño moderado (en este caso, $np=1000×0.001=1$).
+
+Utilizando esta distribución, calcular la probabilidad de que
+
+(a) por lo menos un libro sea mal ubicado ese dı́a.
+
+> $$P(Y \geq 1) = 1 - P(X=0) = 1 - \frac{e^{-1}1^0}{0!} = 1 - \frac{1}{e} = 0.6321$$
+
+(b) exactamente 3 libros sean mal ubicados ese dı́a. Comparar con el valor exacto.
+
+> $$P(Y = 3) = \frac{e^{-1}1^3}{3!} = 0.0613$$
+>
+> Donde el valor exactos es:
+>
+> $$P(X = 3) = \binom{1000}{3} 0.001³(1-0.001)^{997} = 0.0.612$$
