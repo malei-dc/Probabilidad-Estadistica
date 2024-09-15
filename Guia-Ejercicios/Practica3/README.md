@@ -16,7 +16,7 @@ Sea X una v.a. con función de densidad:
 >   > $f: R \rightarrow [-1, 1]$ si $x \in [-1, 1]$, entonces $0.75 (1-x²) \geq 0$, luego $f(x) \geq 0, \forall x \in R$
 > - $\int_{-\infty}^{\infty} f(x)dx = 1$
 >
-> $$\int_{-\infty}^{\infty} 0.75(1-x²) = 0.75 \int_{-1}^{1} (1-x²)dx = 0.75 * (x - \frac{x³}{3}) |_{-1}^{+1} = 0.75 * (\frac{2}{3} - (-\frac{2}{3})) = 1$$
+> $$\int_{-\infty}^{\infty} 0.75(1-x²) = 0.75 \int_{-1}^{1} (1-x²)dx = 0.75 * (x - \frac{x³}{3}) \bigg|_{-1}^{+1} = 0.75 * (\frac{2}{3} - (-\frac{2}{3})) = 1$$
 >
 > Luego concluimos que es una función de densidad 
 
