@@ -41,3 +41,23 @@ Sea X una v.a. con función de densidad:
 (d) Graficar $f_X$ y $F_X$.
 
 ![](/Guia-Ejercicios/Practica3/imgs/ej1d.png)
+
+### 2) Función distribución
+
+Sea $X$ una v.a. continua con función de distribución
+
+![](/Guia-Ejercicios/Practica3/imgs/ej2Distribucion.png)
+
+(a) ¿Cuál es el valor de $\sigma$?
+
+(b) Calcular, usando $F_X(x)$,
+
+- $P(X \leq 1)$
+- $P (0,5 \leq X \leq 1)$
+- $P (0,5 < X \leq 1|X < 1)$
+
+(c) Hallar la mediana $\tilde{\mu}$ de esta distribución.
+
+(d) Encontrar la función de densidad $f_X(x)$.
+
+(e) Graficar $f_X$ y $F_X$ . Agregar la recta vertical $x = \tilde{\mu}$.
