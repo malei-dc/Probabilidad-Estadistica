@@ -50,14 +50,83 @@ Sea $X$ una v.a. continua con función de distribución
 
 (a) ¿Cuál es el valor de $\sigma$?
 
+> $$Lim_{x \rightarrow 2^-} \frac{x³}{\sigma} = 1 \Rightarrow \frac{8}{\sigma} = 1 \Rightarrow \sigma = 8$$
+
 (b) Calcular, usando $F_X(x)$,
 
-- $P(X \leq 1)$
-- $P (0,5 \leq X \leq 1)$
-- $P (0,5 < X \leq 1|X < 1)$
+- $P(X \leq 1) =$
+    > $= F_X(1) = \frac{1}{8}$
+- $P (0,5 \leq X \leq 1)=$
+    > $= F_X(1) - F_X(0.5) = \frac{1}{8} - \frac{1}{64} = \frac{7}{64}$
+- $P (0,5 < X \leq 1|X < 1) =$
+    > $= \frac{F_X(1) - F_X(0.5)}{F_X(1)} = \frac{7}{8}$
 
 (c) Hallar la mediana $\tilde{\mu}$ de esta distribución.
 
+> La mediana de la distribución es el 50-percentil, es decir, tenemos que buscar $x_{0.50}$ tal que $F_X(x_{0.50}) = 0.5$.
+>
+> $$F_X(x_{0.5}) = 0.5 \Leftrightarrow \frac{x_{0.5}³}{8} = 0.5 \Leftrightarrow x_{0.5} = \sqrt[3]{4} = \tilde{\mu}$$
+
 (d) Encontrar la función de densidad $f_X(x)$.
 
-(e) Graficar $f_X$ y $F_X$ . Agregar la recta vertical $x = \tilde{\mu}$.
+> Para encontrar $f_X(x)$ derivamos $F_X(x)$ por tramos. Dicho esto, el único caso interesante es cuando $0 \leq x < 2$ pues la derivación de numeros constantes es $0$.
+>
+> $$f_X(x) = (F_X(x))' = \frac{x³}{8} \frac{d}{dx} = \frac{3x²}{8}$$
+>
+> Por esto la función densidad es:
+>
+>![](/Guia-Ejercicios/Practica3/imgs/ej2dDensidad.png)
+
+(e) Graficar $f_X$ y $F_X$ . Agregar la recta vertical $x = \tilde{\mu} $.
+
+> Graficos en el archivo [practica3.ipynb](/Guia-Ejercicios/Practica3/practica3.ipynb)
+
+### 3) Distribución uniforme
+
+Sea $U$ una v.a. con distribución $U[0, \sigma]$ , para $\sigma > 0$.
+
+(a) Hallar la función de distribución acumulada de $U$.
+
+> - Si $x < 0$ entonces debe valer $F_U(x)=0$.
+> - Si $0 \leq x \leq \sigma$ entonces vale $F_U(x) = \frac{x - 0}{\sigma -0}$.
+> - Si $x > \sigma$ entonces debe valer $F_U(x)=1$.
+
+(b) Si $P(1 \leq U \leq 3) = 0,5$, ¿qué valores puede tomar $\sigma$?
+
+> - Caso $\sigma \geq 3$
+>
+> $$P(1 \leq U \leq 3) = F_U(3) - F_U(1) = \frac{3}{\sigma}-\frac{1}{\sigma} = 0.5 \Leftrightarrow \sigma = 4$$
+>
+> - Caso $1 \leq \sigma < 3$
+>
+> $$P(1 \leq U \leq 3) = F_U(3) - F_U(1) = 1 - \frac{1}{\sigma} = 0.5 \Leftrightarrow \frac{1}{\sigma} = 0.5 \Leftrightarrow \sigma = 2$$
+>
+> - Caso $\sigma < 1$, imposible pues:
+>
+> $$P(1 \leq U \leq 3) = F_U(3) - F_U(1) = 1 - 1 =0 \neq 0.5$$ 
+
+(c) Para $\sigma$ hallados en el item **(b)** estimar la $P(U^2 < 2)$.
+
+> $$P(U^2 < 2) = P(U < \sqrt{2}) = F_U(\sqrt{2}) = \frac{\sqrt{2}}{\sigma}$$
+>
+> Caso $\sigma = 4$
+>
+> $$P(U^2 < 2) = P(U < \sqrt{2}) = F_U(\sqrt{2}) = \frac{\sqrt{2}}{4}$$
+>
+> Caso $\sigma = 2$
+>
+> $$P(U^2 < 2) = P(U < \sqrt{2}) = F_U(\sqrt{2}) = \frac{\sqrt{2}}{2}$$
+
+### 4) Esperanza y varianza de continuas
+
+Consideremos una v.a. $Y$ con función de densidad
+
+![](/Guia-Ejercicios/Practica3/imgs/ej4Densidad.png)
+
+(a) Calcular la función de distribución de $Y$.
+
+> 
+
+(b) Calcular $E(Y)$ y $V(Y)$.
+
+(c) Calcular $E(1/Y)$. ¿Qué conclusión saca respecto a la relación entre $E(1/Y)$ y $1/E(Y)$.
