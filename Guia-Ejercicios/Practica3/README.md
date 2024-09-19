@@ -125,7 +125,19 @@ Consideremos una v.a. $Y$ con función de densidad
 
 (a) Calcular la función de distribución de $Y$.
 
-> 
+> - Si $0 \leq y \leq 5$
+>
+> $$F_Y(y) = \int_{-\infty}^y (\frac{1}{25} y)\space dy = \frac{1}{25} \int_{0}^y y \space dy = \frac{1}{25} \frac{y²}{2} \bigg|^{y}_{0} = \frac{y²}{50}$$
+>
+> - Si $5 < y \leq 10$
+>
+> $$F_Y(y) = F_Y(5) + \int_{-\infty}^y \frac{2}{5}-(\frac{1}{25} y)\space dy = \frac{5²}{50} + \int_{5}^y \frac{2}{5}-(\frac{1}{25} y)\space dy = \frac{1}{2} + (\frac{2}{5} y-\frac{1}{50}y²) \bigg|_{5}^{y} =$$
+>
+> $$= \frac{1}{2} + (\frac{2}{5} y-\frac{1}{50}y² - (2 - \frac{1}{2})) = \frac{2}{5} y-\frac{1}{50}y² - 1$$
+>
+> La función acumulada queda así:
+
+![](/Guia-Ejercicios/Practica3/imgs/ej4aAcumulada.png)
 
 (b) Calcular $E(Y)$ y $V(Y)$.
 
