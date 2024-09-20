@@ -150,14 +150,14 @@ Consideremos una v.a. $Y$ con función de densidad
 >
 > $$\int_{0}^{5} (\frac{1}{25} y³) \space dy \space + \int_{5}^{10} (\frac{2}{5}y²-\frac{1}{25} y³) \space dy - E(Y)² =$$
 >
-> $$=\frac{1}{25} \frac{y⁴}{4} \bigg|_{0}^{5} + (\frac{2}{5} \frac{y³}{3} - \frac{1}{25} \frac{y⁴}{4}) \bigg|_{5}^{10} - E(Y)² = \frac{25}{4} - 0 + \frac{100}{3} - \frac{125}{12} - 5² = \frac{25}{6}$$
+> $$=\frac{1}{25} \frac{y⁴}{4} \bigg|_0^5 + (\frac{2}{5} \frac{y³}{3} - \frac{1}{25} \frac{y⁴}{4}) \bigg|_5^{10} - E(Y)² = \frac{25}{4} - 0 + \frac{100}{3} - \frac{125}{12} - 5² = \frac{25}{6}$$
 >
 
 (c) Calcular $E(1/Y)$. ¿Qué conclusión saca respecto a la relación entre $E(1/Y)$ y $1/E(Y)$.
 
 > $$E(\frac{1}{Y}) = \int_{-\infty}^{\infty} \frac{1}{y} \space f(y) \space dx = \int_{0}^{5} (\frac{1}{y} * \frac{1}{25} y) \space dy \space + \int_{5}^{10} [\frac{1}{y} * (\frac{2}{5}-\frac{1}{25} y)] \space dy = \int_{0}^{5} (\frac{1}{25} ) \space dy \space + \int_{5}^{10} (\frac{2}{5y}-\frac{1}{25}) \space dy =$$
 >
-> $$= \frac{y}{25} \bigg|_{0}^{5} + (\frac{2}{5} ln(y) - \frac{y}{25}) \bigg|_{5}^{10} = \frac{1}{5} - 0 + \frac{2}{5}ln(10) - \frac{2}{5} - \frac{2}{5}ln(5) + \frac{1}{5} = \frac{2}{5}(ln(10)-ln(5)) = \frac{2}{5}ln(\frac{10}{5}) = \frac{2}{5}ln(2)$$
+> $$= \frac{y}{25} \bigg|_0^5 + (\frac{2}{5} ln(y) - \frac{y}{25}) \bigg|_5^{10} = \frac{1}{5} - 0 + \frac{2}{5}ln(10) - \frac{2}{5} - \frac{2}{5}ln(5) + \frac{1}{5} = \frac{2}{5}(ln(10)-ln(5)) = \frac{2}{5}ln(\frac{10}{5}) = \frac{2}{5}ln(2)$$
 >
 
 >$$\frac{1}{E(Y)} = \frac{1}{5}$$
