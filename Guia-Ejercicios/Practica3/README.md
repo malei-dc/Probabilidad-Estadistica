@@ -143,23 +143,23 @@ Consideremos una v.a. $Y$ con función de densidad
 
 > $$E(Y) = \mu_Y = \int_{-\infty}^{\infty} y \space f(y) \space dx = \int_{0}^{5} (y * \frac{1}{25} y) \space dy \space + \int_{5}^{10} [y * (\frac{2}{5}-\frac{1}{25} y)] \space dy = \int_{0}^{5} (\frac{1}{25} y²) \space dy \space + \int_{5}^{10} (\frac{2}{5}y-\frac{1}{25} y²) \space dy =$$
 >
-> $$=  \frac{1}{25} \frac{y³}{3} \bigg|_{0}^{5} + (\frac{2}{5} \frac{y²}{2} - \frac{1}{25} \frac{y³}{3}) \bigg|_{5}^{10} = \frac{5}{3} - 0 + \frac{20}{3} - \frac{10}{3} = 5$$
->
->
+> $$= \frac{1}{25} \frac{y³}{3} \bigg|_{0}^{5} + (\frac{2}{5} \frac{y²}{2} - \frac{1}{25} \frac{y³}{3}) \bigg|_{5}^{10} = \frac{5}{3} - 0 + \frac{20}{3} - \frac{10}{3} = 5$$
+
+
 > $$V(Y) = E(Y²) - E(Y)² = \int_{-\infty}^{\infty} y² \space f(y) \space dx = \int_{0}^{5} (y² * \frac{1}{25} y) \space dy \space + \int_{5}^{10} [y² * (\frac{2}{5}-\frac{1}{25} y)] \space dy = \int_{0}^{5} (\frac{1}{25} y³) \space dy \space + \int_{5}^{10} (\frac{2}{5}y²-\frac{1}{25} y³) \space dy - E(Y)²$$
 >
-> $$=  \frac{1}{25} \frac{y⁴}{4} \bigg|_{0}^{5} + (\frac{2}{5} \frac{y³}{3} - \frac{1}{25} \frac{y⁴}{4}) \bigg|_{5}^{10} - E(Y)² = \frac{25}{4} - 0 + \frac{100}{3} - \frac{125}{12} - 5² = \frac{25}{6}$$
+> $$= \frac{1}{25} \frac{y⁴}{4} \bigg|_{0}^{5} + (\frac{2}{5} \frac{y³}{3} - \frac{1}{25} \frac{y⁴}{4}) \bigg|_{5}^{10} - E(Y)² = \frac{25}{4} - 0 + \frac{100}{3} - \frac{125}{12} - 5² = \frac{25}{6}$$
 >
 
 (c) Calcular $E(1/Y)$. ¿Qué conclusión saca respecto a la relación entre $E(1/Y)$ y $1/E(Y)$.
 
 > $$E(\frac{1}{Y}) = \int_{-\infty}^{\infty} \frac{1}{y} \space f(y) \space dx = \int_{0}^{5} (\frac{1}{y} * \frac{1}{25} y) \space dy \space + \int_{5}^{10} [\frac{1}{y} * (\frac{2}{5}-\frac{1}{25} y)] \space dy = \int_{0}^{5} (\frac{1}{25} ) \space dy \space + \int_{5}^{10} (\frac{2}{5y}-\frac{1}{25}) \space dy =$$
 >
-> $$=  \frac{y}{25} \bigg|_{0}^{5} + (\frac{2}{5} ln(y) - \frac{y}{25}) \bigg|_{5}^{10} = \frac{1}{5} - 0 + \frac{2}{5}ln(10) - \frac{2}{5} - \frac{2}{5}ln(5) + \frac{1}{5} = \frac{2}{5}(ln(10)-ln(5)) = \frac{2}{5}ln(\frac{10}{5}) = \frac{2}{5}ln(2)$$
+> $$= \frac{y}{25} \bigg|_{0}^{5} + (\frac{2}{5} ln(y) - \frac{y}{25}) \bigg|_{5}^{10} = \frac{1}{5} - 0 + \frac{2}{5}ln(10) - \frac{2}{5} - \frac{2}{5}ln(5) + \frac{1}{5} = \frac{2}{5}(ln(10)-ln(5)) = \frac{2}{5}ln(\frac{10}{5}) = \frac{2}{5}ln(2)$$
 >
->
+
 >$$\frac{1}{E(Y)} = \frac{1}{5}$$
->
+
 > Ambos resultados dan distinto. En aplicaciones prácticas, esto significa que si tengo que tomar decisiones basadas en $Y$ y trabajo con valores esperados, necesito tener cuidado si las decisiones dependen de $\frac{1}{Y}$. Estas dos cantidades son distintas en general porque la esperanza de una función no lineal de una variable aleatoria (como $\frac{1}{Y}$) no es igual a la función aplicada a la esperanza de esa variable.
 
 ### 5) Puntos al azar
