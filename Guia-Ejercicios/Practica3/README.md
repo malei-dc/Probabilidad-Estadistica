@@ -40,7 +40,7 @@ Sea X una v.a. con función de densidad:
 
 (d) Graficar $f_X$ y $F_X$.
 
-![](/Guia-Ejercicios/Practica3/imgs/ej1d.png)
+> ![](/Guia-Ejercicios/Practica3/imgs/ej1d.png)
 
 ### 2) Función distribución
 
@@ -136,9 +136,90 @@ Consideremos una v.a. $Y$ con función de densidad
 > $$= \frac{1}{2} + (\frac{2}{5} y-\frac{1}{50}y² - (2 - \frac{1}{2})) = \frac{2}{5} y-\frac{1}{50}y² - 1$$
 >
 > La función acumulada queda así:
-
-![](/Guia-Ejercicios/Practica3/imgs/ej4aAcumulada.png)
+>
+> ![](/Guia-Ejercicios/Practica3/imgs/ej4aAcumulada.png)
 
 (b) Calcular $E(Y)$ y $V(Y)$.
 
+> $$E(Y) = \mu_Y = \int_{-\infty}^{\infty} y \space f(y) \space dx = \int_{0}^{5} (y * \frac{1}{25} y) \space dy \space + \int_{5}^{10} [y * (\frac{2}{5}-\frac{1}{25} y)] \space dy = \int_{0}^{5} (\frac{1}{25} y²) \space dy \space + \int_{5}^{10} (\frac{2}{5}y-\frac{1}{25} y²) \space dy =$$
+>
+> $$=  \frac{1}{25} \frac{y³}{3} \bigg|_{0}^{5} + (\frac{2}{5} \frac{y²}{2} - \frac{1}{25} \frac{y³}{3}) \bigg|_{5}^{10} = \frac{5}{3} - 0 + \frac{20}{3} - \frac{10}{3} = 5$$
+>
+
+> $$V(Y) = E(Y²) - E(Y)² = \int_{-\infty}^{\infty} y² \space f(y) \space dx = \int_{0}^{5} (y² * \frac{1}{25} y) \space dy \space + \int_{5}^{10} [y² * (\frac{2}{5}-\frac{1}{25} y)] \space dy = \int_{0}^{5} (\frac{1}{25} y³) \space dy \space + \int_{5}^{10} (\frac{2}{5}y²-\frac{1}{25} y³) \space dy - E(Y)²$$
+>
+> $$=  \frac{1}{25} \frac{y⁴}{4} \bigg|_{0}^{5} + (\frac{2}{5} \frac{y³}{3} - \frac{1}{25} \frac{y⁴}{4}) \bigg|_{5}^{10} - E(Y)² = \frac{25}{4} - 0 + \frac{100}{3} - \frac{125}{12} - 5² = \frac{25}{6}$$
+
 (c) Calcular $E(1/Y)$. ¿Qué conclusión saca respecto a la relación entre $E(1/Y)$ y $1/E(Y)$.
+
+> $$E(\frac{1}{Y}) = \int_{-\infty}^{\infty} \frac{1}{y} \space f(y) \space dx = \int_{0}^{5} (\frac{1}{y} * \frac{1}{25} y) \space dy \space + \int_{5}^{10} [\frac{1}{y} * (\frac{2}{5}-\frac{1}{25} y)] \space dy = \int_{0}^{5} (\frac{1}{25} ) \space dy \space + \int_{5}^{10} (\frac{2}{5y}-\frac{1}{25}) \space dy =$$
+>
+> $$=  \frac{y}{25} \bigg|_{0}^{5} + (\frac{2}{5} ln(y) - \frac{y}{25}) \bigg|_{5}^{10} = \frac{1}{5} - 0 + \frac{2}{5}ln(10) - \frac{2}{5} - \frac{2}{5}ln(5) + \frac{1}{5} = \frac{2}{5}(ln(10)-ln(5)) = \frac{2}{5}ln(\frac{10}{5}) = \frac{2}{5}ln(2)$$
+
+>$$\frac{1}{E(Y)} = \frac{1}{5}$$
+
+> Ambos resultados dan distinto. En aplicaciones prácticas, esto significa que si tengo que tomar decisiones basadas en $Y$ y trabajo con valores esperados, necesito tener cuidado si las decisiones dependen de $\frac{1}{Y}$. Estas dos cantidades son distintas en general porque la esperanza de una función no lineal de una variable aleatoria (como $\frac{1}{Y}$) no es igual a la función aplicada a la esperanza de esa variable.
+
+### 5) Puntos al azar
+
+Se eligen $n$ puntos al azar en el intervalo $[0, 1]$ de forma independiente (con distribución uniforme). Sea $X$ = "Cantidad de puntos que caen en el intervalo $[0, p] \space (0 < p < 1)$. ¿Qué distribución tiene $X$?
+
+> $X$ es una variable aleatoria discreta binomial $X \sim Bi(n,p)$ donde $p$ es $F(p)$ de que caiga en el intervalo correspondiente de la distribución uniforme. Esto se transforma en una discreta ya que cuando fijamos $p$, contamos las veces que caen en el intervalo o no caen. 
+
+### 6) Distribución normal estandar
+
+Sea $Z$ una v.a. con distribución $N(0, 1)$. Calcular:
+
+> Usamos la tabla de distribución acumulada
+
+1. $P(0 \leq Z \leq 2) =$
+
+    > $= \phi(2) - \phi(0) = 0.9772 - 0.5000 = 0.4472$
+
+2. $P(|Z| \leq 2,5)=$
+
+    > $= P(-2.5 \leq Z \leq 2,5) = \phi(2.5) - \phi(-2.5) = \phi(2.5) - (1 - \phi(2.5)) = 0.9938 - 0.0062 = 0.9876$
+
+3. $P(Z \geq −1,37)=$
+
+    > $= 1 - P(Z \leq −1,37) = 1 - \phi(-1.37) = 1 - (1 - \phi(1.37)) = 0.9147$
+
+4. $c$ tal que $P(Z < c) = 0,98$
+
+    > Busco en la tabla el valor que más se aproxime a $0,9800$, en este caso $c = 2.05$
+
+5. $c$ tal que $P(|Z| \leq c) = 0,90$
+
+    > $P(|Z| \leq c) = P(-c \leq Z \leq c) = \phi(c) - \phi(-c) = \phi(c) - (1-\phi(c)) = 2 \phi(c) - 1 = 0.90 \Rightarrow \phi(c) = 0.95 \Rightarrow c = 1.64$
+
+6. el valor $z_{\alpha}$ para $\alpha = 0.1, 0.05, 0.025, 0.01$, donde $z_{\alpha}$ se define como el valor tal que $P (Z > z_{\alpha} ) = \alpha$
+
+    > Desarrollemos un poco: $P (Z > z_{\alpha} ) = 1 - P(Z \leq z_{\alpha}) = \alpha \Rightarrow P(Z \leq z_{\alpha}) = 1 - \alpha$ 
+    >
+    > - $P(Z \leq z_{\alpha}) = 1 - 0.1 = 0.9 \Rightarrow z_{\alpha} = 1.28$
+    > - $P(Z \leq z_{\alpha}) = 1 - 0.05 = 0.95 \Rightarrow z_{\alpha} = 1.64$
+    > - $P(Z \leq z_{\alpha}) = 1 - 0.025 = 0.975 \Rightarrow z_{\alpha} = 1.96$
+    > - $P(Z \leq z_{\alpha}) = 1 - 0.01 = 0.99 \Rightarrow z_{\alpha} = 2.33$
+
+### 7) Distribucion normal no estandar
+
+Sea $X$ una v.a. con distribución $N(5, 0.25)$. Calcular:
+
+> El truco para distribucion normal no estandar es transfomarlo en una estandar ya que nos gusta la tablita, de la siguiente forma:
+>
+> $$\text{Si } X \sim N(\mu, \sigma{²}) \text{ entonces } \frac{X-\mu}{\sigma} \sim N(0,1)$$
+>
+> En nuestro caso tenemos:
+>
+> $$X \sim N(5, 0.25) \Rightarrow Y = \frac{X - 5}{\sqrt{0.25}} = \frac{X - 5}{0.5} \sim N(0, 1)$$
+
+1. $P(4.75 \leq X \leq 5.50) =$
+
+    > $= F_X(5.50) - F_X(4.75) = \phi(\frac{5.50 - 5}{0.5}) - \phi(\frac{4.75 - 5}{0.5}) = \phi(1) - \phi(-0.5) = \phi(1) - (1 - \phi(0.5)) = 0.8413 - (1 - 0.6915) = 0.5328$
+
+2. $P(|X| > 5.25) =$
+
+    > $= 1 - P(|X| \leq 5.25) = 1 - P(-5.25 \leq X \leq 5.25)$
+
+3. $c$ tal que $P(|X − 5| \leq c) = 0.90$
+4. el 90-percentil de $X$
