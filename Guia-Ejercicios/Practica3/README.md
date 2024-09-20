@@ -143,6 +143,8 @@ Consideremos una v.a. $Y$ con función de densidad
 
 > $$E(Y) = \mu_Y = \int_{-\infty}^{\infty} y \space f(y) \space dx = \int_{0}^{5} (y * \frac{1}{25} y) \space dy \space + \int_{5}^{10} [y * (\frac{2}{5}-\frac{1}{25} y)] \space dy = \int_{0}^{5} (\frac{1}{25} y²) \space dy \space + \int_{5}^{10} (\frac{2}{5}y-\frac{1}{25} y²) \space dy =$$
 >
+> $$E(Y) = \mu_Y = \int_{-\infty}^{\infty} y \space f(y) \space dx = \int_{0}^{5} (y * \frac{1}{25} y) \space dy \space + \int_{5}^{10} [y * (\frac{2}{5}-\frac{1}{25} y)] \space dy = \int_{0}^{5} (\frac{1}{25} y²) \space dy \space + \int_{5}^{10} (\frac{2}{5}y-\frac{1}{25} y²) \space dy =$$
+>
 > $$= \frac{1}{25} \frac{y³}{3} \bigg|_{0}^{5} + (\frac{2}{5} \frac{y²}{2} - \frac{1}{25} \frac{y³}{3}) \bigg|_{5}^{10} = \frac{5}{3} - 0 + \frac{20}{3} - \frac{10}{3} = 5$$
 
 
