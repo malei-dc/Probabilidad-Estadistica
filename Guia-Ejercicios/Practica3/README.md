@@ -145,7 +145,6 @@ Consideremos una v.a. $Y$ con función de densidad
 >
 > $$=  \frac{1}{25} \frac{y³}{3} \bigg|_{0}^{5} + (\frac{2}{5} \frac{y²}{2} - \frac{1}{25} \frac{y³}{3}) \bigg|_{5}^{10} = \frac{5}{3} - 0 + \frac{20}{3} - \frac{10}{3} = 5$$
 >
-
 >
 > $$V(Y) = E(Y²) - E(Y)² = \int_{-\infty}^{\infty} y² \space f(y) \space dx = \int_{0}^{5} (y² * \frac{1}{25} y) \space dy \space + \int_{5}^{10} [y² * (\frac{2}{5}-\frac{1}{25} y)] \space dy = \int_{0}^{5} (\frac{1}{25} y³) \space dy \space + \int_{5}^{10} (\frac{2}{5}y²-\frac{1}{25} y³) \space dy - E(Y)²$$
 >
@@ -158,9 +157,9 @@ Consideremos una v.a. $Y$ con función de densidad
 >
 > $$=  \frac{y}{25} \bigg|_{0}^{5} + (\frac{2}{5} ln(y) - \frac{y}{25}) \bigg|_{5}^{10} = \frac{1}{5} - 0 + \frac{2}{5}ln(10) - \frac{2}{5} - \frac{2}{5}ln(5) + \frac{1}{5} = \frac{2}{5}(ln(10)-ln(5)) = \frac{2}{5}ln(\frac{10}{5}) = \frac{2}{5}ln(2)$$
 >
-
+>
 >$$\frac{1}{E(Y)} = \frac{1}{5}$$
-
+>
 > Ambos resultados dan distinto. En aplicaciones prácticas, esto significa que si tengo que tomar decisiones basadas en $Y$ y trabajo con valores esperados, necesito tener cuidado si las decisiones dependen de $\frac{1}{Y}$. Estas dos cantidades son distintas en general porque la esperanza de una función no lineal de una variable aleatoria (como $\frac{1}{Y}$) no es igual a la función aplicada a la esperanza de esa variable.
 
 ### 5) Puntos al azar
