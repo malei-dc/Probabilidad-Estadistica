@@ -223,7 +223,26 @@ Sea $X$ una v.a. con distribución $N(5, 0.25)$. Calcular:
 
 2. $P(|X| > 5.25) =$
 
-    > $= 1 - P(|X| \leq 5.25) = 1 - P(-5.25 \leq X \leq 5.25)$
+    > $= 1 - P(|X| \leq 5.25) = 1 - P(-5.25 \leq X \leq 5.25) = 1 - (F_X(5.25) - F_X(-5.25)) = 1 - (\phi(\frac{5.25 - 5}{0.5}) - \phi(\frac{-5.25 - 5}{0.5})) = 1 - (\phi(0.5) - \phi(-20.5)) = 1 - (\phi(0.5) - (1 - \phi(20.5))) =$
+    >
+    > Como el valor de 20.5 es muy elevado, es $\phi(20.5) \approx 1$, por lo tanto queda:
+    >
+    >$= 1 - \phi(0.5) = 0.3085$
 
 3. $c$ tal que $P(|X − 5| \leq c) = 0.90$
+
+    > $P(-c \leq X − 5 \leq c) = P(\frac{-c + 5 - 5}{0.5} \leq X \leq \frac{c+5-5}{0.5}) = P(\frac{-c}{0.5} \leq X \leq \frac{c}{0.5}) = 0.9$
+    >
+    > Como tenemos una distribución normal, sabemos que es simétrica alrrededor de 0. Si $P(\frac{-c}{0.5} \leq X \leq \frac{c}{0.5}) = 0.9$ deja un 10% de la probabilidad fuera del intervalo $\frac{-c}{0.5} \leq X \leq \frac{c}{0.5}$ equitativamente en el lado negativo como en el positivo, por esto para cubrir el intervalo necesitamos encontrar $P(X \leq \frac{c}{0.5}) = 0.95$
+    >
+    > Usando la tabla: $\frac{c}{0.5} = 1.64 \Rightarrow c = 0.82$
+
 4. el 90-percentil de $X$
+
+    > Tenemos que buscar $P(X \leq x_{0.9})=0.9$ es decir $P(Y \leq \frac{x_{0.9} - 5}{0.5}) = 0.9$.
+    >
+    > Buscando en la tabla nos da que $\frac{x_{0.9} - 5}{0.5} = 1.28 \Rightarrow x_{0.9} = 5.64$
+
+### 8) Cefálic
+
+Se supone que en cierta población humana, el ı́ndice cefálic $I$ (anchura del cráneo expresada como porcentaje de la longitud) es una v.a. con distribución $N(\mu, \sigma^2 )$ . Si hay un 58 % de individuos con $I \leq 75$, un 38 % con $75 < I \leq 80$ y un 4 % con $I \geq 80$, hallar la función de densidad de $I$ y calcular $P (78 \leq I \leq 82)$.
