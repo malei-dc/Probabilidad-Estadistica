@@ -246,3 +246,52 @@ Sea $X$ una v.a. con distribución $N(5, 0.25)$. Calcular:
 ### 8) Cefálic
 
 Se supone que en cierta población humana, el ı́ndice cefálic $I$ (anchura del cráneo expresada como porcentaje de la longitud) es una v.a. con distribución $N(\mu, \sigma^2 )$ . Si hay un 58 % de individuos con $I \leq 75$, un 38 % con $75 < I \leq 80$ y un 4 % con $I \geq 80$, hallar la función de densidad de $I$ y calcular $P (78 \leq I \leq 82)$.
+
+> Notemos que no tenemos el valor de $\sigma$ y  $\mu$. Analicemos los datos de la consigna:
+>
+> - $P(I \leq 75) = 0.58 \Rightarrow \phi(\frac{75 - \mu}{\sigma}) = 0.58 \text{ usando la tabla tenemos que } \frac{75 - \mu}{\sigma} = 0.2$
+> - $P(75 < I \leq 80) = 0.38 \Rightarrow \phi(\frac{80 - \mu}{\sigma}) - \phi(\frac{75 - \mu}{\sigma}) = 0.38 \Rightarrow \phi(\frac{80 - \mu}{\sigma}) - 0.58 = 0.38 \Rightarrow \phi(\frac{80 - \mu}{\sigma})  = 0.96 \text{ usando la tabla tenemos que } \frac{80 - \mu}{\sigma} = 1.75$
+>
+> Si despejamos $\sigma$ obtenemos en cada ecuación:
+>
+> - $\sigma = \frac{75-\mu}{0.2}$
+> - $\sigma = \frac{80-\mu}{1.75}$
+>
+> Igualamos para despejar $\mu$:
+>
+> $$\frac{75-\mu}{0.2} = \frac{80-\mu}{1.75}$$
+>
+> $$131.25 - 1.75 \mu = 16 - 0.2 \mu$$
+>
+> $$115.25 = 1.55 \mu \Rightarrow \mu = 74.3548$$
+>
+> Reemplazamos $\mu$ para averiguar $\sigma$
+>
+> $$\sigma = \frac{80-75.3548}{1.75} = 3.2258$$
+>
+> $$\sigma² = 10.4058$$
+>
+> Entonces la función densidad es la de $I \sim N(74.3548, 10.4058)$
+>
+> ![](/Guia-Ejercicios/Practica3/imgs/ej8Densidad.png)
+>
+> Calcular $P (78 \leq I \leq 82)=$
+>
+> $$= F_I(82) - F_I(78) = \phi(\frac{82 - 74.3548}{3.2258}) - \phi(\frac{78 - 74.3548}{3.2258}) = \phi(2.37) - \phi(1.13) = 0.9911 - 0.8708 = 0.1203$$
+
+### 9) Distancia intercuartil (IQR)
+
+La distancia intercuartil (IQR) de una v.a. se define como la diferencia entre el tercer cuartil y el primer cuartil. Hallar la IQR de $Z$, una v.a. con distribución $N(0, 1)$.
+
+> Tenemos que buscar $z_{0.25}$ y $z_{0.75}$ tales que $P(Z \leq z_{0.75}) = 0.75$ y $P(Z \leq z_{0.25}) = 0.25$
+>
+> $$\phi(z_{0.75})=0.75 \Rightarrow z_{0.75} = 0.67$$ 
+>
+> $$\phi(z_{0.25})=0.25 \Rightarrow 1 - \phi(z_{0.25}) = 1 - 0.25 = 0.75 \Rightarrow -z_{0.25} = -0.67$$
+>
+> Entonces IRQ = $0.67 - (-0.67) = 1.34$
+
+### 10) Mediana de desviaciones absolutas (MAD)
+
+La mediana de desviaciones absolutas (MAD) de una v.a. se define como la mediana del valor absoluto de la diferencia entre la variable aleatoria y su mediana. Hallar la MAD de $Z$, una v.a. con distribución $N(0, 1)$. Sugerencia: Hallar la f.d.a de $|Z|$.
+
