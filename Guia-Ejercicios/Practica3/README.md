@@ -295,3 +295,29 @@ La distancia intercuartil (IQR) de una v.a. se define como la diferencia entre e
 
 La mediana de desviaciones absolutas (MAD) de una v.a. se define como la mediana del valor absoluto de la diferencia entre la variable aleatoria y su mediana. Hallar la MAD de $Z$, una v.a. con distribución $N(0, 1)$. Sugerencia: Hallar la f.d.a de $|Z|$.
 
+> Dado que $Z$ es simétrica alrrededor del 0, la distribución de $|Z|$ se puede obtener:
+>
+> $$F_{|Z|}(z) = P(|Z| \leq z) = P(-z \leq Z \leq z) = \phi(z) - \phi(-z) = \phi(z) - (1 - \phi(z))$$
+>
+> Nos queda:
+>
+> $$F_{|Z|}(z) = 2 \phi(z) - 1 \text{ donde } \phi(z) \text{ es la f.d.a de la normal estándar}$$
+>
+> La mediana es el $50$-percentil, es decir el $F_{|Z|} = 0.5$, juntando con lo de arriba implica que:
+>
+> $$2 \phi(z) - 1 = 0.5 \Rightarrow \phi = 0.75$$
+>
+> Usando la tabla encontramos que:
+>
+> $$m \approx 0.67$$
+
+### 11) Biblioteca
+
+La biblioteca de una facultad dispone de una red de computadoras al alcance de los estudiantes. La proporción de tiempo que un usuario destina a búsqueda bibliográfica es una variable aleatoria $T$ con función de densidad
+
+$$ f_T(t) = c(100 − t) I_{[0,100]}(t)$$
+
+(a) Hallar el valor de la constante c
+
+(b) Supóngase que de acuerdo con el porcentaje de tiempo destinado a las búsqueda bibliográfica el usuario es clasificado en distintas categorı́as. La clasificación se realiza de la siguiente manera: si T < 25 % el usuario es de tipo 1, si 25% \leq T< 50% el usuario es tipo 2, si 50 % ≤ T < 75 % el usuario es tipo 3 y si T > 75 %, el usuario es de tipo es 4. Hallar la distribución del tipo de usuario.
+
