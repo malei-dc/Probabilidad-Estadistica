@@ -309,7 +309,7 @@ La mediana de desviaciones absolutas (MAD) de una v.a. se define como la mediana
 >
 > Usando la tabla encontramos que:
 >
-> $$m \approx 0.67$$
+> $$z \approx 0.67$$
 
 ### 11) Biblioteca
 
@@ -319,5 +319,44 @@ $$ f_T(t) = c(100 − t) I_{[0,100]}(t)$$
 
 (a) Hallar el valor de la constante c
 
-(b) Supóngase que de acuerdo con el porcentaje de tiempo destinado a las búsqueda bibliográfica el usuario es clasificado en distintas categorı́as. La clasificación se realiza de la siguiente manera: si T < 25 % el usuario es de tipo 1, si 25% \leq T< 50% el usuario es tipo 2, si 50 % ≤ T < 75 % el usuario es tipo 3 y si T > 75 %, el usuario es de tipo es 4. Hallar la distribución del tipo de usuario.
+> Como sabemos que $\int_{-\infty}^{\infty}f_T(t)dx=1$ por ser función densidad, calculamos:
+>
+> $$\int_{-\infty}^{\infty}f_T(t)dt = \int_{0}^{100} c(100 − t) dt = c \int_{0}^{100} (100 − t) dt = c * (100t - \frac{t²}{2})\bigg|^{100}_0 = c * 10000 - 5000 = 1$$
+>
+> $$\Rightarrow c = \frac{1}{5000}$$
 
+(b) Supóngase que de acuerdo con el porcentaje de tiempo destinado a las búsqueda bibliográfica el usuario es clasificado en distintas categorı́as. La clasificación se realiza de la siguiente manera: si T < 25 % el usuario es de tipo 1, si 25% <= T< 50% el usuario es tipo 2, si 50 % ≤ T < 75 % el usuario es tipo 3 y si T > 75 %, el usuario es de tipo es 4. Hallar la distribución del tipo de usuario.
+
+> - Tipo 1: tenemos que $T<25$
+>
+> $$\int_{0}^{25} \frac{1}{5000}(100 − t) dt = \frac{1}{5000} * (100t - \frac{t²}{2})\bigg|^{25}_0 = \frac{7}{16}$$
+>
+> - Tipo 2: tenemos que $25 \leq T < 50$
+>
+> $$\int_{25}^{50} \frac{1}{5000}(100 − t) dt = \frac{1}{5000} * (100t - \frac{t²}{2})\bigg|^{50}_{25} = \frac{1}{5000} * (3750 - 2187.5) = \frac{5}{16}$$
+>
+> - Tipo 3: tenemos que $50 \leq T < 75$
+>
+> $$\int_{50}^{75} \frac{1}{5000}(100 − t) dt = \frac{1}{5000} * (100t - \frac{t²}{2})\bigg|^{75}_{50} = \frac{1}{5000} * (4687.5-3750) = \frac{3}{16}$$
+>
+> - Tipo 4: tenemos que $T \geq 75$
+>
+> $$\int_{75}^{100} \frac{1}{5000}(100 − t) dt = \frac{1}{16}$$
+>
+> pues es el complemento de todos los demás tipos
+
+### 12) Diámetro de un tronco
+
+El diámetro $D$ (expresado en dm) del tronco de cierta especie de árboles es una variable aleatoria con función de densidad
+
+$$ f_D(x) = k x I_{[0,10]}(x)$$
+
+(a) Hallar el valor de la constante $k$.
+
+(b) ¿Cuál es la probabilidad de que el diámetro de un árbol de esa especie elegido al azar mida entre 4 y 6 dm?
+
+(c) Idem (b) sabiendo que el diámetro mide más de 5 dm.
+
+(d) En un área del bosque hay 3 árboles de esa especie. Calcular la probabilidad de que exactamente 2 de ellos tengan el diámetro entre 4 y 6 dm.
+
+(e) ¿Cuántos árboles habrı́a que muestrear en el bosque para que la probabilidad de encontrar al menos uno cuyo diámetro mida entre 4 y 6 dm, sea mayor o igual que 0.99?
